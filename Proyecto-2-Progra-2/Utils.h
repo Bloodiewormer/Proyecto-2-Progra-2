@@ -13,3 +13,6 @@ public:
 	static std::string InputString();
 };
 
+
+
+
