@@ -127,21 +127,39 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Carnivore.h" />
+    <ClInclude Include="CarnivoreFactory.h" />
     <ClInclude Include="Controller.h" />
     <ClInclude Include="Creature.h" />
+    <ClInclude Include="CreatureFactory.h" />
     <ClInclude Include="Ecosystem.h" />
+    <ClInclude Include="Entity.h" />
     <ClInclude Include="Grid.h" />
+    <ClInclude Include="Herbivore.h" />
+    <ClInclude Include="HerbivoreFactory.h" />
+    <ClInclude Include="Omnivore.h" />
+    <ClInclude Include="OmnivoreFactory.h" />
     <ClInclude Include="Position.h" />
+    <ClInclude Include="Resource.h" />
     <ClInclude Include="UI.h" />
     <ClInclude Include="Utils.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Carnivore.cpp" />
+    <ClCompile Include="CarnivoreFactory.cpp" />
     <ClCompile Include="Controller.cpp" />
     <ClCompile Include="Creature.cpp" />
+    <ClCompile Include="CreatureFactory.cpp" />
     <ClCompile Include="Ecosystem.cpp" />
+    <ClCompile Include="Entity.cpp" />
     <ClCompile Include="Grid.cpp" />
+    <ClCompile Include="Herbivore.cpp" />
+    <ClCompile Include="HerbivoreFactory.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Omnivore.cpp" />
+    <ClCompile Include="OmnivoreFactory.cpp" />
     <ClCompile Include="Position.cpp" />
+    <ClCompile Include="Resource.cpp" />
     <ClCompile Include="UI.cpp" />
     <ClCompile Include="Utils.cpp" />
   </ItemGroup>

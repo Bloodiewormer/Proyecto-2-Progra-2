@@ -1,6 +1,6 @@
 #pragma once
 #include "Entity.h"
-class Creature : public Entity
+class Resource : public Entity
 {
 };
 

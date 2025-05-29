@@ -1,4 +1,5 @@
 #pragma once
+#include "Entity.h"
 class Grid
 {
 private:
@@ -8,9 +9,10 @@ private:
 public:	
 	Grid(int w, int h) : width(w), height(h) {} // Constructor para inicializar la cuadrícula con un ancho y alto específicos
 	bool isEmoty(int x, int y) const; // Verifica si una celda está vacía
-	//getEntity(int x, int y) const; // Obtiene la entidad en una celda específica
+	Entity getEntity(int x, int y) const; // Obtiene la entidad en una celda específica
 	void moveEntity(int fromX, int fromY, int toX, int toY); // Mueve una entidad de una celda a otra
 	void removeEntity(int x, int y); // Elimina una entidad de una celda específica
-	//void addEntity(int x, int y, Entity* entity); // Agrega una entidad a una celda específica
+	void addEntity(int x, int y, Entity* entity); // Agrega una entidad a una celda específica
 };
+
 
