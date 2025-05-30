@@ -11,6 +11,7 @@ public:
 	static int InputInt();
 	static double InputDouble();
 	static std::string InputString();
+	static double Random();
 };
 
 

@@ -62,3 +62,9 @@ std::string Utils::InputString()
 	std::getline(std::cin, value);
 	return value;
 }
+
+double Utils::Random()
+{
+	srand(static_cast<unsigned int>(time(0))); // Seed the random number generator
+	return static_cast<double>(rand()) / RAND_MAX; // Return a random double between 0 and 1
+}

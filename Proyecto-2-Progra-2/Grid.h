@@ -1,13 +1,14 @@
 #pragma once
 #include "Entity.h"
+#include <vector>
 class Grid
 {
 private:
-	int width;  // Ancho de la cuadrícula
-	int height; // Altura de la cuadrícula
-	// MATRI DE ENTIDADES, TODAVIA NO SE SI USAR LISTA PROPIA O DE LA STANDARD LIBRARY
+	int width; // Ancho de la cuadrícula
+	int height; // Alto de la cuadrícula
+	std::vector<std::vector<Entity*>> cells; // Matriz de celdas que contiene entidades
 public:	
-	Grid(int w, int h) : width(w), height(h) {} // Constructor para inicializar la cuadrícula con un ancho y alto específicos
+	Grid(int size); // Constructor para inicializar la cuadrícula con un ancho y alto específicos
 	bool isEmoty(int x, int y) const; // Verifica si una celda está vacía
 	Entity getEntity(int x, int y) const; // Obtiene la entidad en una celda específica
 	void moveEntity(int fromX, int fromY, int toX, int toY); // Mueve una entidad de una celda a otra
