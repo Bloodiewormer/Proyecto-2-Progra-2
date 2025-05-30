@@ -137,13 +137,16 @@
     <ClInclude Include="Grid.h" />
     <ClInclude Include="Herbivore.h" />
     <ClInclude Include="HerbivoreFactory.h" />
+    <ClInclude Include="HerbivoreFeeding.h" />
     <ClInclude Include="IFeedingStrategy.h" />
     <ClInclude Include="IMovementStrategy.h" />
     <ClInclude Include="IReproductionStrategy.h" />
     <ClInclude Include="Omnivore.h" />
     <ClInclude Include="OmnivoreFactory.h" />
     <ClInclude Include="Position.h" />
+    <ClInclude Include="RandomMovement.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="TargetedMovement.h" />
     <ClInclude Include="UI.h" />
     <ClInclude Include="Utils.h" />
   </ItemGroup>
@@ -158,6 +161,7 @@
     <ClCompile Include="Grid.cpp" />
     <ClCompile Include="Herbivore.cpp" />
     <ClCompile Include="HerbivoreFactory.cpp" />
+    <ClCompile Include="HerbivoreFeeding.cpp" />
     <ClCompile Include="IFeedingStrategy.cpp" />
     <ClCompile Include="IMovementStrategy.cpp" />
     <ClCompile Include="IReproductionStrategy.cpp" />
@@ -165,7 +169,9 @@
     <ClCompile Include="Omnivore.cpp" />
     <ClCompile Include="OmnivoreFactory.cpp" />
     <ClCompile Include="Position.cpp" />
+    <ClCompile Include="RandomMovement.cpp" />
     <ClCompile Include="Resource.cpp" />
+    <ClCompile Include="TargetedMovement.cpp" />
     <ClCompile Include="UI.cpp" />
     <ClCompile Include="Utils.cpp" />
   </ItemGroup>

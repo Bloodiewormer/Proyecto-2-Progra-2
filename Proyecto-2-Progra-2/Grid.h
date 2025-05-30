@@ -14,6 +14,9 @@ public:
 	void moveEntity(int fromX, int fromY, int toX, int toY); // Mueve una entidad de una celda a otra
 	void removeEntity(int x, int y); // Elimina una entidad de una celda específica
 	void addEntity(int x, int y, Entity* entity); // Agrega una entidad a una celda específica
+
+
+	
 };
 
 

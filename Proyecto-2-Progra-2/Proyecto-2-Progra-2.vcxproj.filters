@@ -19,12 +19,6 @@
     <Filter Include="Header Files\Main tools">
       <UniqueIdentifier>{023265fc-8efe-48e1-b73b-ded9d7ccde66}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Factory">
-      <UniqueIdentifier>{4ba65c32-990d-41b5-8a27-38a662b83273}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Principal">
-      <UniqueIdentifier>{efef592f-ee9e-4385-9a63-f92f6b0d1307}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Controller.h">
@@ -36,44 +30,44 @@
     <ClInclude Include="Utils.h">
       <Filter>Header Files\Main tools</Filter>
     </ClInclude>
-    <ClInclude Include="CarnivoreFactory.h">
-      <Filter>Header Files\Factory</Filter>
-    </ClInclude>
-    <ClInclude Include="CreatureFactory.h">
-      <Filter>Header Files\Factory</Filter>
-    </ClInclude>
-    <ClInclude Include="HerbivoreFactory.h">
-      <Filter>Header Files\Factory</Filter>
-    </ClInclude>
-    <ClInclude Include="OmnivoreFactory.h">
-      <Filter>Header Files\Factory</Filter>
-    </ClInclude>
-    <ClInclude Include="Carnivore.h">
-      <Filter>Header Files\Principal</Filter>
-    </ClInclude>
     <ClInclude Include="Creature.h">
-      <Filter>Header Files\Principal</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Ecosystem.h">
-      <Filter>Header Files\Principal</Filter>
-    </ClInclude>
-    <ClInclude Include="Entity.h">
-      <Filter>Header Files\Principal</Filter>
-    </ClInclude>
-    <ClInclude Include="Herbivore.h">
-      <Filter>Header Files\Principal</Filter>
-    </ClInclude>
-    <ClInclude Include="Omnivore.h">
-      <Filter>Header Files\Principal</Filter>
-    </ClInclude>
-    <ClInclude Include="Resource.h">
-      <Filter>Header Files\Principal</Filter>
-    </ClInclude>
-    <ClInclude Include="Position.h">
-      <Filter>Header Files\Principal</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Grid.h">
-      <Filter>Header Files\Main tools</Filter>
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Position.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CreatureFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Herbivore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Carnivore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Omnivore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HerbivoreFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CarnivoreFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OmnivoreFactory.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="IMovementStrategy.h">
       <Filter>Header Files</Filter>
@@ -82,6 +76,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="IReproductionStrategy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomMovement.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HerbivoreFeeding.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TargetedMovement.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -144,6 +147,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="IReproductionStrategy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RandomMovement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HerbivoreFeeding.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TargetedMovement.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
