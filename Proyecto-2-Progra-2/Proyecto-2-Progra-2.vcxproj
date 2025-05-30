@@ -137,6 +137,9 @@
     <ClInclude Include="Grid.h" />
     <ClInclude Include="Herbivore.h" />
     <ClInclude Include="HerbivoreFactory.h" />
+    <ClInclude Include="IFeedingStrategy.h" />
+    <ClInclude Include="IMovementStrategy.h" />
+    <ClInclude Include="IReproductionStrategy.h" />
     <ClInclude Include="Omnivore.h" />
     <ClInclude Include="OmnivoreFactory.h" />
     <ClInclude Include="Position.h" />
@@ -155,6 +158,9 @@
     <ClCompile Include="Grid.cpp" />
     <ClCompile Include="Herbivore.cpp" />
     <ClCompile Include="HerbivoreFactory.cpp" />
+    <ClCompile Include="IFeedingStrategy.cpp" />
+    <ClCompile Include="IMovementStrategy.cpp" />
+    <ClCompile Include="IReproductionStrategy.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Omnivore.cpp" />
     <ClCompile Include="OmnivoreFactory.cpp" />
