@@ -4,6 +4,7 @@
 
 class RandomMovement : public IMovementStrategy {
 public:
+	RandomMovement() = default;
     Position move(const Position& current) override;
 };
 

@@ -87,6 +87,21 @@
     <ClInclude Include="TargetedMovement.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="OmnivoreFeeding.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CarnivoreFeeding.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AsexualReproduction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MatingReproduction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CreatureDecorator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Controller.cpp">
@@ -156,6 +171,21 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="TargetedMovement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OmnivoreFeeding.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CarnivoreFeeding.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AsexualReproduction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MatingReproduction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CreatureDecorator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

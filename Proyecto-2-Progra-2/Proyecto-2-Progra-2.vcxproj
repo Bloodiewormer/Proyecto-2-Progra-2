@@ -127,10 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AsexualReproduction.h" />
     <ClInclude Include="Carnivore.h" />
     <ClInclude Include="CarnivoreFactory.h" />
+    <ClInclude Include="CarnivoreFeeding.h" />
     <ClInclude Include="Controller.h" />
     <ClInclude Include="Creature.h" />
+    <ClInclude Include="CreatureDecorator.h" />
     <ClInclude Include="CreatureFactory.h" />
     <ClInclude Include="Ecosystem.h" />
     <ClInclude Include="Entity.h" />
@@ -141,8 +144,10 @@
     <ClInclude Include="IFeedingStrategy.h" />
     <ClInclude Include="IMovementStrategy.h" />
     <ClInclude Include="IReproductionStrategy.h" />
+    <ClInclude Include="MatingReproduction.h" />
     <ClInclude Include="Omnivore.h" />
     <ClInclude Include="OmnivoreFactory.h" />
+    <ClInclude Include="OmnivoreFeeding.h" />
     <ClInclude Include="Position.h" />
     <ClInclude Include="RandomMovement.h" />
     <ClInclude Include="Resource.h" />
@@ -151,10 +156,13 @@
     <ClInclude Include="Utils.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AsexualReproduction.cpp" />
     <ClCompile Include="Carnivore.cpp" />
     <ClCompile Include="CarnivoreFactory.cpp" />
+    <ClCompile Include="CarnivoreFeeding.cpp" />
     <ClCompile Include="Controller.cpp" />
     <ClCompile Include="Creature.cpp" />
+    <ClCompile Include="CreatureDecorator.cpp" />
     <ClCompile Include="CreatureFactory.cpp" />
     <ClCompile Include="Ecosystem.cpp" />
     <ClCompile Include="Entity.cpp" />
@@ -166,8 +174,10 @@
     <ClCompile Include="IMovementStrategy.cpp" />
     <ClCompile Include="IReproductionStrategy.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MatingReproduction.cpp" />
     <ClCompile Include="Omnivore.cpp" />
     <ClCompile Include="OmnivoreFactory.cpp" />
+    <ClCompile Include="OmnivoreFeeding.cpp" />
     <ClCompile Include="Position.cpp" />
     <ClCompile Include="RandomMovement.cpp" />
     <ClCompile Include="Resource.cpp" />
