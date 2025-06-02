@@ -2,5 +2,8 @@
 #include "Creature.h"
 class Herbivore : public Creature
 {
+public:
+	Herbivore(Position pos, IMovementStrategy* m, IFeedingStrategy* f, IReproductionStrategy* r, int energy = 100);
+
 };
 
