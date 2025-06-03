@@ -131,6 +131,7 @@
     <ClInclude Include="Carnivore.h" />
     <ClInclude Include="CarnivoreFactory.h" />
     <ClInclude Include="CarnivoreFeeding.h" />
+    <ClInclude Include="ClimateManager.h" />
     <ClInclude Include="Controller.h" />
     <ClInclude Include="Creature.h" />
     <ClInclude Include="CreatureDecorator.h" />
@@ -161,6 +162,7 @@
     <ClCompile Include="Carnivore.cpp" />
     <ClCompile Include="CarnivoreFactory.cpp" />
     <ClCompile Include="CarnivoreFeeding.cpp" />
+    <ClCompile Include="ClimateManager.cpp" />
     <ClCompile Include="Controller.cpp" />
     <ClCompile Include="Creature.cpp" />
     <ClCompile Include="CreatureDecorator.cpp" />
