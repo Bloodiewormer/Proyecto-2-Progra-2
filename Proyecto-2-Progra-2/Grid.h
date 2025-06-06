@@ -1,21 +1,20 @@
 #pragma once
 #include "Entity.h"
-#include <vector>
+
+const int GRID_SIZE = 10;
+
 class Grid
 {
 private:
-	int width; // Ancho de la cuadrícula
-	int height; // Alto de la cuadrícula
-	std::vector<std::vector<Entity*>> cells; // Matriz de celdas que contiene entidades
+	Entity* cells[GRID_SIZE][GRID_SIZE];
 public:	
-	Grid(int size); // Constructor para inicializar la cuadrícula con un ancho y alto específicos
-	bool isEmoty(int x, int y) const; // Verifica si una celda está vacía
-	Entity getEntity(int x, int y) const; // Obtiene la entidad en una celda específica
-	void moveEntity(int fromX, int fromY, int toX, int toY); // Mueve una entidad de una celda a otra
-	void removeEntity(int x, int y); // Elimina una entidad de una celda específica
-	void addEntity(int x, int y, Entity* entity); // Agrega una entidad a una celda específica
 
-
+	Grid();
+	void placeEntity(Entity* e);// Coloca una entidad en una celda específica
+	void moveEntity(Entity* e, int newX, int newY);
+	void updateAll();
+	void draw();
+	bool isInBounds(int x, int y);// Verifica si las coordenadas están dentro de los límites del grid
 	
 };
 

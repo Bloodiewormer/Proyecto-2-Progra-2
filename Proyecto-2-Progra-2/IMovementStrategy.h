@@ -1,9 +1,8 @@
 #pragma once
-#include "Entity.h"
 
-class IMovementStrategy {
-public:
-    virtual Position move(const Position& current) = 0;
+class Creature;
+
+struct IMovementStrategy {
+    virtual void move(Creature* creature) = 0;
     virtual ~IMovementStrategy() {}
 };
-

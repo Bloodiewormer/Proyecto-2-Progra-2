@@ -6,15 +6,20 @@ protected:
 	Position position; // Position of the entity in the grid
 	int energy; // Energy level of the entity
 public:
-    Entity(Position pos, int energy = 100);
+    Entity(int x, int y, int energy = 100);
     virtual ~Entity() = default;
+    virtual void update() = 0;
+    virtual char getSymbol() = 0;
 
     Position getPosition() const;
+    void setPosition(int x, int y);
     int getEnergy() const;
+    void modifyEnergy(int delta);
     void setEnergy(int value);
-    void setPosition(const Position& pos);
+    
 
-    virtual void update() = 0;
+
+
 
 };
 

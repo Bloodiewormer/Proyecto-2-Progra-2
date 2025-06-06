@@ -25,5 +25,6 @@ public:
 
     std::string getClimate() const;
     std::string getSeason() const;
+
 };
 

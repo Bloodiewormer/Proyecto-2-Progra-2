@@ -1,19 +1,22 @@
 #pragma once
 #include "Grid.h"
+#include <iostream>
 class Ecosystem //singleton
 {
 private:
-	// singleton instance
+	Grid grid;
+	int tick;
 	static Ecosystem* instance;
-	Ecosystem() {} // Constructor privado para evitar instanciación externa
-	//atributes del ecosistema
-	int tickCount; // contador de tics
-	int energyLevel; // nivel de energia del ecosistema
-	//list<Creature*> creatures; // lista de criaturas en el ecosistema //todavia no se si se usa lista propia o de la standard library
-	Grid* grid; // grid del ecosistema
+	Ecosystem() : tick(0) {}
+
+
+
 public:
-	static Ecosystem* getInstance();
-	void timeTick(); // metodo para avanzar un tic en el ecosistema
+	static Ecosystem& getInstance();
+	Grid& getGrid() { return grid; }
+	void run(int maxTicks);
+
+
 	//void saveState(); // metodo para guardar el estado del ecosistema
 	//void loadState(); // metodo para cargar el estado del ecosistema
 

@@ -1,5 +1,11 @@
 #include <iostream>
 #include "Utils.h"
+
+
+#include <ctime>
+#include <cstdlib>
+#include "Ecosystem.h"
+#include "CreatureFactory.h"
 //std::cout << "+-----------------------------------------------------+" << std::endl;
 //std::cout << "|                                                     |" << std::endl;
 //std::cout << "| (c) 2025                                            |" << std::endl;
@@ -16,7 +22,20 @@
 //std::cout << "+-----------------------------------------------------+" << std::endl;
 int main() {
 	Utils::ProgramColor(); // set color to console
+    srand(time(0));
+    Ecosystem& eco = Ecosystem::getInstance();
+    Grid& grid = eco.getGrid();
 
+    Entity* h1 = CreatureFactory::createHerbivore(1, 1);
+    Entity* c1 = CreatureFactory::createCarnivore(2, 2);
+    Entity* o1 = CreatureFactory::createOmnivore(3, 3);
+
+    grid.placeEntity(h1);
+    grid.placeEntity(c1);
+    grid.placeEntity(o1);
+
+    eco.run(10);
+    return 0;
 }
 
 /// <Notas>/// 

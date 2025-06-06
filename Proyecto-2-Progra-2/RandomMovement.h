@@ -1,10 +1,11 @@
 #pragma once
-#include <cstdlib>
+
 #include "IMovementStrategy.h"
+#include "Creature.h"
+#include "Ecosystem.h"
 
 class RandomMovement : public IMovementStrategy {
 public:
-	RandomMovement() = default;
-    Position move(const Position& current) override;
+    void move(Creature* creature) override;
 };
 
