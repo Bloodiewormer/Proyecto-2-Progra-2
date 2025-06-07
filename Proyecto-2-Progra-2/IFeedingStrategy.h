@@ -1,9 +1,9 @@
 #pragma once
-#include"Entity.h"
+class Creature;
 
-class IFeedingStrategy {
-public:
-    virtual void feed(class Creature* creature) = 0;
+struct IFeedingStrategy {
+    virtual void feed(Creature* creature) = 0;
     virtual ~IFeedingStrategy() {}
 };
+
 

@@ -1,13 +1,11 @@
 #pragma once
-#include"IFeedingStrategy.h"
-#include"Grid.h"
-#include"Creature.h"
-class OmnivoreFeeding : public IFeedingStrategy{
-private:
-    Grid* grid;
+#include "IFeedingStrategy.h"
+#include "Creature.h"
+#include "Ecosystem.h"
+#include "Resource.h"
 
+class OmnivoreFeeding : public IFeedingStrategy {
 public:
-    OmnivoreFeeding(Grid* grid);
-    void feed(Creature* creature) override;
+    void feed(Creature* creature) override; 
 };
 

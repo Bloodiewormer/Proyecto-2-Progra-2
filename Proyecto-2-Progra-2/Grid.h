@@ -1,7 +1,9 @@
 #pragma once
 #include "Entity.h"
 
-const int GRID_SIZE = 10;
+#include <vector>
+
+const int GRID_SIZE = 5;
 
 class Grid
 {
@@ -15,6 +17,12 @@ public:
 	void updateAll();
 	void draw();
 	bool isInBounds(int x, int y);// Verifica si las coordenadas están dentro de los límites del grid
+	std::vector<Entity*> getEntities() const;
+	Entity* getEntityAt(int x, int y) const;
+	void removeEntity(Entity* e);// Elimina una entidad del grid
+
+	
+	
 	
 };
 

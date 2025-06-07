@@ -4,12 +4,9 @@
 class Resource : public Entity
 {
 private:
-    std::string type;
-    int regenerationTimer;
-
+    std::string type; // can only be "water" and "Grass(food)"
 public:
-    Resource(Position pos, const std::string& type, int energyValue = 20, int regen = 0);
-
+    Resource(int x, int y, const std::string& type, int energyValue);
     std::string getType() const;
     void update() override;
 };

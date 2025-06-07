@@ -5,7 +5,7 @@
 
 class CreatureObserver : public Creature, public IObserver {
 public:
-    CreatureObserver(int x, int y, IMovementStrategy* m) : Creature(x, y, m) {}
+    CreatureObserver(int x, int y, IMovementStrategy* m,IFeedingStrategy* f) : Creature(x, y, m,f) {}
     void onSeasonChange(const char* season) override {
         std::cout << "Creature at (" << position.x << ", " << position.y << ") noticed season change: " << season << "\n";
     }
