@@ -6,6 +6,7 @@
 #include <cstdlib>
 #include "Ecosystem.h"
 #include "CreatureFactory.h"
+#include "Grass.h"
 //std::cout << "+-----------------------------------------------------+" << std::endl;
 //std::cout << "|                                                     |" << std::endl;
 //std::cout << "| (c) 2025                                            |" << std::endl;
@@ -27,13 +28,26 @@ int main() {
     Grid& grid = eco.getGrid();
 
     Entity* h1 = CreatureFactory::createHerbivore(1, 1);
-    Entity* c1 = CreatureFactory::createCarnivore(2, 2);
-    Entity* o1 = CreatureFactory::createOmnivore(3, 3);
+	Entity* h2 = CreatureFactory::createHerbivore(1, 2);
+    Entity* c1 = CreatureFactory::createCarnivore(3, 3);
+	Entity* c2 = CreatureFactory::createCarnivore(3, 2);
+    Entity* o1 = CreatureFactory::createOmnivore(5, 5);
+	Entity* o2 = CreatureFactory::createOmnivore(5, 4);
+
+	Entity* p1 = new Grass(1, 5);
+	Entity* p2 = new Grass(3, 5);
+
 
     grid.placeEntity(h1);
     grid.placeEntity(c1);
     grid.placeEntity(o1);
+	grid.placeEntity(h2);
+	grid.placeEntity(c2);
+	grid.placeEntity(o2);
+	grid.placeEntity(p1);
+	grid.placeEntity(p2);
 
+    eco.run(10);
     eco.run(10);
     return 0;
 }

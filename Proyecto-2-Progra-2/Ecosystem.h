@@ -1,5 +1,6 @@
 #pragma once
 #include "Grid.h"
+#include "Utils.h"
 #include <iostream>
 class Ecosystem //singleton
 {

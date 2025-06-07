@@ -139,6 +139,7 @@
     <ClInclude Include="Ecosystem.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="EntityIterator.h" />
+    <ClInclude Include="Grass.h" />
     <ClInclude Include="Grid.h" />
     <ClInclude Include="Group.h" />
     <ClInclude Include="Herbivore.h" />
@@ -148,7 +149,6 @@
     <ClInclude Include="IReproductionStrategy.h" />
     <ClInclude Include="MatingReproduction.h" />
     <ClInclude Include="Omnivore.h" />
-    <ClInclude Include="OmnivoreFeeding.h" />
     <ClInclude Include="Position.h" />
     <ClInclude Include="RandomMovement.h" />
     <ClInclude Include="Resource.h" />
@@ -169,6 +169,7 @@
     <ClCompile Include="Ecosystem.cpp" />
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="EntityIterator.cpp" />
+    <ClCompile Include="Grass.cpp" />
     <ClCompile Include="Grid.cpp" />
     <ClCompile Include="Group.cpp" />
     <ClCompile Include="Herbivore.cpp" />
@@ -179,7 +180,6 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MatingReproduction.cpp" />
     <ClCompile Include="Omnivore.cpp" />
-    <ClCompile Include="OmnivoreFeeding.cpp" />
     <ClCompile Include="Position.cpp" />
     <ClCompile Include="RandomMovement.cpp" />
     <ClCompile Include="Resource.cpp" />

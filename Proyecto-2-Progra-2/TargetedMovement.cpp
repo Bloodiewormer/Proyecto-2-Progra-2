@@ -6,7 +6,8 @@
 void TargetedMovement::move(Creature* creature) {
     Position current = creature->getPosition();
     Entity* closest = nullptr;
-    int minDist = std::numeric_limits<int>::max();
+    //int minDist = std::numeric_limits<int>::max();
+	int minDist = 1000000; // Arbitrary large number to represent "infinity"
 
     for (auto* e : Ecosystem::getInstance().getGrid().getEntities()) {
         if (e != creature && dynamic_cast<Resource*>(e)) {

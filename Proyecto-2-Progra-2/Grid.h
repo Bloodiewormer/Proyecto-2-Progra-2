@@ -3,7 +3,7 @@
 
 #include <vector>
 
-const int GRID_SIZE = 5;
+const int GRID_SIZE = 10;
 
 class Grid
 {
@@ -20,6 +20,8 @@ public:
 	std::vector<Entity*> getEntities() const;
 	Entity* getEntityAt(int x, int y) const;
 	void removeEntity(Entity* e);// Elimina una entidad del grid
+
+	Position getUnoccupiedPosition(int seed = 0) const; // Obtiene una posición no ocupada en el grid
 
 	
 	

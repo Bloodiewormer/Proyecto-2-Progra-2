@@ -15,9 +15,11 @@ void Ecosystem::run(int maxTicks) {
     for (int i = 0; i < maxTicks; ++i) {
         tick++;
         std::cout << "Tick: " << tick << "\n";
-        grid.updateAll();
         grid.draw();
+        grid.updateAll();
         std::cout << "\n";
-        system("pause");
+		//Utils::sleep(1000); // Sleep for 1 second
+        Utils::pause();
+		Utils::clearScreen();
     }
 }

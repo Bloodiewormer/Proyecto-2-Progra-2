@@ -5,7 +5,7 @@
 #include "RandomMovement.h"
 #include "CarnivoreFeeding.h"
 #include "HerbivoreFeeding.h"
-#include "OmnivoreFeeding.h"
+
 
 class CreatureFactory {
 public:
@@ -16,6 +16,6 @@ public:
 		return new Carnivore(x, y, new RandomMovement(), new CarnivoreFeeding());
     }
     static Omnivore* createOmnivore(int x, int y) {
-		return new Omnivore(x, y, new RandomMovement(), new OmnivoreFeeding());
+		return new Omnivore(x, y, new RandomMovement(), new HerbivoreFeeding());// Omnivore can eat both herbivores and carnivores, so we can use HerbivoreFeeding for simplicity
     }
 };;
