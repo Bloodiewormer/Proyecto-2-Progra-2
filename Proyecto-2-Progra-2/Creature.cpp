@@ -1,11 +1,5 @@
 #include "Creature.h"
 
-//Creature::Creature(Position pos, IMovementStrategy* m, IFeedingStrategy* f, IReproductionStrategy* r, int energy)
-//    : Entity(pos, energy), movement(m), feeding(f), reproduction(r), age(0) {
-//}
-
-
-
 Creature::Creature(int x, int y, IMovementStrategy* moveStrat, IFeedingStrategy* f):Entity(x, y), movement(moveStrat), feeding(f), age(0) {
     energy = 100; // Default energy value
 	age = 0; // Default age value
