@@ -141,7 +141,6 @@
     <ClInclude Include="EntityIterator.h" />
     <ClInclude Include="Grass.h" />
     <ClInclude Include="Grid.h" />
-    <ClInclude Include="Group.h" />
     <ClInclude Include="Herbivore.h" />
     <ClInclude Include="HerbivoreFeeding.h" />
     <ClInclude Include="IFeedingStrategy.h" />
@@ -171,7 +170,6 @@
     <ClCompile Include="EntityIterator.cpp" />
     <ClCompile Include="Grass.cpp" />
     <ClCompile Include="Grid.cpp" />
-    <ClCompile Include="Group.cpp" />
     <ClCompile Include="Herbivore.cpp" />
     <ClCompile Include="HerbivoreFeeding.cpp" />
     <ClCompile Include="IFeedingStrategy.cpp" />
