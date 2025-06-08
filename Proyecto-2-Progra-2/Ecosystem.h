@@ -9,9 +9,7 @@ private:
 	int tick;
 	static Ecosystem* instance;
 	Ecosystem() : tick(0) {}
-
-
-
+	int seed; // Semilla para la generación aleatoria de eventos
 public:
 	static Ecosystem& getInstance();
 	Grid& getGrid() { return grid; }

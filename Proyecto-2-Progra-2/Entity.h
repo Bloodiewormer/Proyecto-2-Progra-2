@@ -7,6 +7,7 @@ protected:
 	int energy; // Energy level of the entity
 public:
     Entity(int x, int y, int energy = 100);
+	Entity(const Position& pos, int energy = 100);
     virtual ~Entity() = default;
     virtual void update() = 0;
     virtual char getSymbol() = 0;

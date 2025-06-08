@@ -6,9 +6,18 @@
 
 
 
-Creature::Creature(int x, int y, IMovementStrategy* moveStrat, IFeedingStrategy* f):Entity(x, y), movement(moveStrat), feeding(f), age(0) {
+Creature::Creature(int x, int y):Entity(x, y), age(0) {
+	movement = nullptr; // Initialize movement strategy to nullptr
+	feeding = nullptr; // Initialize feeding strategy to nullptr
     energy = 100; // Default energy value
 	age = 0; // Default age value
+}
+
+Creature::Creature(Position p): Entity(p.x, p.y), age(0) {
+    movement = nullptr; // Initialize movement strategy to nullptr
+    feeding = nullptr; // Initialize feeding strategy to nullptr
+    energy = 100; // Default energy value
+    age = 0; // Default age value
 }
 
 Creature::Creature(const Creature& other) : Entity(other.position.x, other.position.y, other.energy), age(other.age) {  

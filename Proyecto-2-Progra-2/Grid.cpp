@@ -50,19 +50,10 @@ void Grid::removeEntity(Entity* e)
 	}
 }
 
-Position Grid::getUnoccupiedPosition(int seed) const
+Position Grid::getUnoccupiedPosition() const
 {
     // Seeding logic: use seed if provided, otherwise seed once with time
-    if (seed != 0) {
-        srand(static_cast<unsigned int>(seed));
-    }
-    else {
-        static bool seeded = false;
-        if (!seeded) {
-            srand(static_cast<unsigned int>(time(nullptr)));
-            seeded = true;
-        }
-    }
+
 
     int x = 0, y = 0;
     int maxAttempts = GRID_SIZE * GRID_SIZE * 2;

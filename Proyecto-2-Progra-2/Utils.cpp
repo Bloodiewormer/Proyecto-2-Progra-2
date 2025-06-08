@@ -39,7 +39,7 @@ void Utils::ProgramColor()
 #endif
 }
 
-int Utils::InputInt()
+int Utils::inputInt()
 {
 	int value;
 	std::cin >> value;
@@ -52,7 +52,7 @@ int Utils::InputInt()
 
 }
 
-double Utils::InputDouble()
+double Utils::inputDouble()
 {
 	double value;
 	std::cin >> value;
@@ -64,7 +64,7 @@ double Utils::InputDouble()
 	return value;
 }
 
-std::string Utils::InputString()
+std::string Utils::inputString()
 {
 	std::string value;
 	while (std::cin.peek() == '\n' || std::cin.peek() == '\r') {

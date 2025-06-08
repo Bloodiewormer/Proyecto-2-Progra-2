@@ -4,7 +4,7 @@
 class Resource : public Entity
 {
 public:
-    Resource(int x, int y, int energyValue = 1);
+    Resource(int x, int y);
 
 };
 

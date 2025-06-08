@@ -13,7 +13,8 @@ protected:
 
 public:
     //Creature(Position pos, IMovementStrategy* m, IFeedingStrategy* f, IReproductionStrategy* r, int energy = 100);
-    Creature(int x, int y, IMovementStrategy* moveStrat, IFeedingStrategy* f);
+    Creature(int x, int y);
+	Creature(Position p);
     Creature(const Creature& other);
     Creature& operator=(const Creature& other);
     virtual ~Creature() = default;

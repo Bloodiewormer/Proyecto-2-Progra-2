@@ -1,8 +1,21 @@
 #include "Omnivore.h"
 
-/*mnivore::Omnivore(Position pos, IMovementStrategy* m, IFeedingStrategy* f, IReproductionStrategy* r, int energy) : Creature(pos, m, f, r, energy) {}*/
 
-Omnivore::Omnivore(int x, int y, IMovementStrategy* m, IFeedingStrategy* f):Creature(x, y, m, f) {}
+
+Omnivore::Omnivore(int x, int y):Creature(x, y) {
+	this->movement = new RandomMovement();
+	this->feeding = new HerbivoreFeeding(); // Default feeding strategy for omnivores	
+	//this->reproductionStrategy = new CarnivoreReproductionStrategy();
+	this->energy = 100; // Initial energy for carnivores
+
+}
+
+Omnivore::Omnivore(Position pos):Creature(pos) {
+	this->movement = new RandomMovement();
+	this->feeding = new HerbivoreFeeding(); // Default feeding strategy for omnivores	
+	//this->reproductionStrategy = new CarnivoreReproductionStrategy();
+	this->energy = 100; // Initial energy for carnivores
+}
 
 char Omnivore::getSymbol()
 {

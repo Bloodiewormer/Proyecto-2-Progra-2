@@ -3,7 +3,8 @@
 class Grass : public Resource
 {
 public:
-    Grass(int x, int y, int energyValue = 1): Resource(x, y, energyValue) {}
+    Grass(int x, int y) : Resource(x, y) { energy = 1; }
+	Grass(Position pos) : Resource(pos.x,pos.y) { energy = 1; }
     char getSymbol() override { return 'G'; }
 
     void update() override {

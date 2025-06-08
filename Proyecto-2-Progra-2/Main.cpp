@@ -23,19 +23,30 @@
 //std::cout << "+-----------------------------------------------------+" << std::endl;
 int main() {
 	Utils::ProgramColor(); // set color to console
-    srand(time(0));
+
+	std::cout << "Introduce seed for random generator?" << std::endl;
+	std::cout << " (0) for random seed" << std::endl;
+	int seed = Utils::inputInt();
+	if (seed == 0) {
+		srand(static_cast<unsigned int>(time(nullptr))); // use current time as seed
+	}
+	else {
+		srand(static_cast<unsigned int>(seed)); // use user provided seed
+	}
+
+
     Ecosystem& eco = Ecosystem::getInstance();
     Grid& grid = eco.getGrid();
 
-    Entity* h1 = CreatureFactory::createHerbivore(1, 1);
-	Entity* h2 = CreatureFactory::createHerbivore(1, 2);
-    Entity* c1 = CreatureFactory::createCarnivore(3, 3);
-	Entity* c2 = CreatureFactory::createCarnivore(3, 2);
-    Entity* o1 = CreatureFactory::createOmnivore(5, 5);
-	Entity* o2 = CreatureFactory::createOmnivore(5, 4);
+    Entity* h1 = CreatureFactory::createHerbivore(grid.getUnoccupiedPosition());
+	Entity* h2 = CreatureFactory::createHerbivore(grid.getUnoccupiedPosition());
+    Entity* c1 = CreatureFactory::createCarnivore(grid.getUnoccupiedPosition());
+	Entity* c2 = CreatureFactory::createCarnivore(grid.getUnoccupiedPosition());
+    Entity* o1 = CreatureFactory::createOmnivore(grid.getUnoccupiedPosition());
+	Entity* o2 = CreatureFactory::createOmnivore(grid.getUnoccupiedPosition());
 
-	Entity* p1 = new Grass(1, 5);
-	Entity* p2 = new Grass(3, 5);
+	Entity* p1 = new Grass(grid.getUnoccupiedPosition());
+	Entity* p2 = new Grass(grid.getUnoccupiedPosition());
 
 
     grid.placeEntity(h1);

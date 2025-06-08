@@ -21,7 +21,7 @@ public:
 	Entity* getEntityAt(int x, int y) const;
 	void removeEntity(Entity* e);// Elimina una entidad del grid
 
-	Position getUnoccupiedPosition(int seed = 0) const; // Obtiene una posición no ocupada en el grid
+	Position getUnoccupiedPosition() const; // Obtiene una posición no ocupada en el grid
 
 	
 	

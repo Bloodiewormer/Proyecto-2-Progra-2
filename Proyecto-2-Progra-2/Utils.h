@@ -10,9 +10,9 @@ public:
 	static void pause();
 	static void sleep(int milliseconds);
 	static void ProgramColor();
-	static int InputInt();
-	static double InputDouble();
-	static std::string InputString();
+	static int inputInt();
+	static double inputDouble();
+	static std::string inputString();
 	static double Random();
 };
 
