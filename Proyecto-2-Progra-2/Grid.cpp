@@ -83,8 +83,13 @@ Position Grid::getUnoccupiedPosition() const
 
 void Grid::updateAll() {
     for (int i = 0; i < GRID_SIZE; ++i)
-        for (int j = 0; j < GRID_SIZE; ++j)
+        for (int j = 0; j < GRID_SIZE; ++j) {
+            if( cells[i][j] && cells[i][j]->isDead()) {
+                removeEntity(cells[i][j]);
+			}
             if (cells[i][j]) cells[i][j]->update();
+        }
+           
 }
 
 void Grid::draw() {

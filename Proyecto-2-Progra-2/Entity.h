@@ -10,13 +10,15 @@ public:
 	Entity(const Position& pos, int energy = 100);
     virtual ~Entity() = default;
     virtual void update() = 0;
-    virtual char getSymbol() = 0;
+    virtual char getSymbol() const = 0;
+    virtual void draw() const = 0;
 
     Position getPosition() const;
     void setPosition(int x, int y);
     int getEnergy() const;
     void modifyEnergy(int delta);
     void setEnergy(int value);
+	bool isDead() const;
     
 
 

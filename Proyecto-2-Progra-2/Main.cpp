@@ -58,8 +58,8 @@ int main() {
 	grid.placeEntity(p1);
 	grid.placeEntity(p2);
 
-    eco.run(10);
-    eco.run(10);
+    eco.run(1000);
+    
     return 0;
 }
 

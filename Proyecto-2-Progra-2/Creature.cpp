@@ -43,6 +43,7 @@ void Creature::update() {
     if (movement) movement->move(this);
 	if (feeding) feeding->feed(this);//
     energy--;
+	//if(season =="summer") energy--; // Example condition for energy consumption
 	age++;
     
     /*

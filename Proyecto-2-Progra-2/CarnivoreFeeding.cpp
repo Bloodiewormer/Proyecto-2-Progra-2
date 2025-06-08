@@ -3,6 +3,7 @@
 
 void CarnivoreFeeding::feed(Creature* creature)
 {
+    //Range-based for loop
     for (Entity* e : Ecosystem::getInstance().getGrid().getEntities()) {
         if (e != creature && dynamic_cast<Creature*>(e) && typeid(*e) != typeid(*creature)) {
             int dx = creature->getPosition().x - e->getPosition().x;
@@ -10,6 +11,9 @@ void CarnivoreFeeding::feed(Creature* creature)
             if (dx * dx + dy * dy <= 2) {
                 Ecosystem::getInstance().getGrid().removeEntity(e);
                 creature->modifyEnergy(5);
+				if (creature->getEnergy() >= 100) { // Check if energy is high enough to avoid overflow
+                   creature->setEnergy(101);
+                } 
                 break;
             }
         }

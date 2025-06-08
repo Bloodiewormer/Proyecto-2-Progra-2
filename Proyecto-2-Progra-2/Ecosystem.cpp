@@ -17,6 +17,21 @@ void Ecosystem::run(int maxTicks) {
         std::cout << "Tick: " << tick << "\n";
         grid.draw();
         grid.updateAll();
+
+		//vector<Animal*> animals = grid.getAnimals();
+        std::vector<Entity*> creatures = grid.getEntities();
+
+		std::cout << "Total Creatures: " << creatures.size() << "\n";
+        for(Entity* creature : creatures) {
+			if (creature->getSymbol() != 'G') {
+				std::cout << "================\n";
+				creature->draw();
+			}
+		}
+		std::cout << "================\n";
+       
+
+
         std::cout << "\n";
 		//Utils::sleep(1000); // Sleep for 1 second
         Utils::pause();

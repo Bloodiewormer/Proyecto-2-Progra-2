@@ -8,6 +8,8 @@ public:
 
 	Carnivore(int x, int y);
 	Carnivore(Position pos);
-	char getSymbol() override;
+	char getSymbol() const override ;
+
+	void draw() const override;
 };
 

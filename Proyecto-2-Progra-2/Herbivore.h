@@ -9,6 +9,6 @@ public:
 	//Herbivore(Position pos, IMovementStrategy* m, IFeedingStrategy* f, IReproductionStrategy* r, int energy = 100);
 	Herbivore(int x, int y);
 	Herbivore(Position pos);
-	char getSymbol() override;
+	char getSymbol() const override;
+	void draw() const override;
 };
-

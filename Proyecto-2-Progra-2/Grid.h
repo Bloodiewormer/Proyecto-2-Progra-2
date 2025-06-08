@@ -3,7 +3,7 @@
 
 #include <vector>
 
-const int GRID_SIZE = 10;
+const int GRID_SIZE = 50;
 
 class Grid
 {

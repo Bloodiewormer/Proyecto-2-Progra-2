@@ -9,8 +9,10 @@ void HerbivoreFeeding::feed(Creature* creature)
             int dy = creature->getPosition().y - e->getPosition().y;
             if (dx * dx + dy * dy <= 2) {
                 Ecosystem::getInstance().getGrid().removeEntity(e);
-                creature->modifyEnergy(3);
-                break;
+                creature->modifyEnergy(5);
+                if (creature->getEnergy() >= 100) { // Check if energy is high enough to avoid overflow
+                    creature->setEnergy(101);
+                }
             }
         }
     }

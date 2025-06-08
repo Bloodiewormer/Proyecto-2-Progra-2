@@ -9,9 +9,11 @@ public:
 	//Omnivore(Position pos, IMovementStrategy* m, IFeedingStrategy* f, IReproductionStrategy* r, int energy = 100);
 	Omnivore(int x, int y);
 	Omnivore(Position pos);
-	char getSymbol() override;
+	char getSymbol() const override;
 	void update() override;
 
+	//draw the creature on the console
+	void draw() const override;
 
 };
 
