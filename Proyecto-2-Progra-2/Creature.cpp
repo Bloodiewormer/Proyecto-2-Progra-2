@@ -1,5 +1,5 @@
 #include "Creature.h"
-
+#include <cstring>
 
 Creature::Creature(int x, int y) :Entity(x, y), age(0) {
     movement = nullptr; // Initialize movement strategy to nullptr
@@ -57,5 +57,29 @@ void Creature::setFeedingStrategy(IFeedingStrategy* f)
 
 int Creature::getAge() const {
     return age;
+}
+
+void Creature::onSeasonChange(const char* newSeason){
+    if (strcmp(newSeason, "primavera") == 0) seasonBoost = 10;
+    else if (strcmp(newSeason, "verano") == 0) seasonBoost = 5;
+    else if (strcmp(newSeason, "otonio") == 0) seasonBoost = 3;
+    else if (strcmp(newSeason, "invierno") == 0) seasonBoost = -5;
+    else seasonBoost = 0;
+}
+
+void Creature::onClimateChange(const char* newClimate){
+    if (strcmp(newClimate, "soleado") == 0) climateBoost = 5;
+    else if (strcmp(newClimate, "lluvioso") == 0) climateBoost = 3;
+    else if (strcmp(newClimate, "nuboso") == 0) climateBoost = 1;
+    else if (strcmp(newClimate, "seco") == 0) climateBoost = -3;
+    else climateBoost = 0;
+}
+
+int Creature::getSeasonBoost() const{
+    return seasonBoost;
+}
+
+int Creature::getClimateBoost() const{
+    return seasonBoost;
 }
 
