@@ -10,20 +10,21 @@ class Creature : public Entity
 protected:
     IMovementStrategy* movement;
     IFeedingStrategy* feeding;
-    // IReproductionStrategy* reproduction;
+    IReproductionStrategy* reproduction;
     int age;
 
 public:
-    //Creature(Position pos, IMovementStrategy* m, IFeedingStrategy* f, IReproductionStrategy* r, int energy = 100);
+
+    virtual ~Creature();
     Creature(int x, int y);
     Creature(Position p);
     Creature(const Creature& other);
     Creature& operator=(const Creature& other);
-    virtual ~Creature() = default;
 
     virtual void update() override;
     void setMovementStrategy(IMovementStrategy* m);
     void setFeedingStrategy(IFeedingStrategy* f);
+	void setReproductionStrategy(IReproductionStrategy* r);
 
     int getAge() const;
 };

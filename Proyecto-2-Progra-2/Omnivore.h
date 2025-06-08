@@ -3,6 +3,7 @@
 #include "RandomMovement.h"
 #include "HerbivoreFeeding.h"
 #include "CarnivoreFeeding.h"
+#include "MatingReproduction.h"
 class Omnivore : public Creature
 {
 public:

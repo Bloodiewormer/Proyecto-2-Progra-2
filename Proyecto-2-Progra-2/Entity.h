@@ -6,6 +6,8 @@ protected:
     Position position; // Position of the entity in the grid
     int energy; // Energy level of the entity
 public:
+
+
     Entity(int x, int y, int energy = 100);
     Entity(const Position& pos, int energy = 100);
     virtual ~Entity() = default;

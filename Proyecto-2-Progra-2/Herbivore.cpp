@@ -7,7 +7,7 @@ Herbivore::Herbivore(int x, int y):Creature(x, y)
 {
 	this->movement = new RandomMovement();
 	this->feeding = new HerbivoreFeeding();
-	//this->reproductionStrategy = new HerbivoreReproductionStrategy();
+	this->reproduction = new MatingReproduction();
 	this->energy = 100; // Initial energy for herbivores
 }
 
@@ -15,7 +15,7 @@ Herbivore::Herbivore(Position pos) :Creature(pos)
 {
 	this->movement = new RandomMovement();
 	this->feeding = new HerbivoreFeeding();
-	//this->reproductionStrategy = new HerbivoreReproductionStrategy();
+	this->reproduction = new MatingReproduction();
 	this->energy = 100; // Initial energy for herbivores
 }
 

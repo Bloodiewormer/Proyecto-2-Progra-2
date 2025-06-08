@@ -5,7 +5,7 @@ Carnivore::Carnivore(int x, int y) :Creature(x, y)
 {
 	this->movement = new RandomMovement();
 	this->feeding = new CarnivoreFeeding();
-	//this->reproductionStrategy = new CarnivoreReproductionStrategy();
+	this->reproduction = new MatingReproduction();
 	this->energy = 100; // Initial energy for carnivores
 }
 
@@ -13,7 +13,7 @@ Carnivore::Carnivore(Position pos) : Creature(pos.x, pos.y)
 {
 	this->movement = new RandomMovement();
 	this->feeding = new CarnivoreFeeding();
-	//this->reproductionStrategy = new CarnivoreReproductionStrategy();
+	this->reproduction = new MatingReproduction();
 	this->energy = 100; // Initial energy for carnivores
 	this->position = pos;
 }

@@ -1,12 +1,13 @@
 #pragma once
 #include"IReproductionStrategy.h"
-#include "Grid.h"
 #include "Creature.h"
+#include "Entity.h"
+#include "Carnivore.h"
+#include "Herbivore.h"
+#include "Omnivore.h"
+#include "Ecosystem.h"
 class MatingReproduction : public IReproductionStrategy{
-private:
-	Grid* grid;
 public:
-	MatingReproduction(Grid* grid);
-	void reproduce(Creature* creature) override;
+	void reproduce(Entity* creature) override;
 };
 

@@ -28,11 +28,14 @@ int main() {
 	std::cout << " (0) for random seed" << std::endl;
 	int seed = Utils::inputInt();
 	if (seed == 0) {
-		srand(static_cast<unsigned int>(time(nullptr))); // use current time as seed
+		seed = static_cast<unsigned int>(time(nullptr));
+		srand(seed); // use current time as seed
 	}
 	else {
 		srand(static_cast<unsigned int>(seed)); // use user provided seed
 	}
+
+	std::cout << "Using seed: " << seed << std::endl;
 
 
     Ecosystem& eco = Ecosystem::getInstance();

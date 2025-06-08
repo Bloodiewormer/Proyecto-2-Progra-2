@@ -2,7 +2,7 @@
 #include"Entity.h"
 class IReproductionStrategy {
 public:
-    virtual void reproduce(class Creature* creature) = 0;
+    virtual void reproduce(class Entity* mate) = 0;
     virtual ~IReproductionStrategy() {}
 };
 

@@ -2,6 +2,7 @@
 #include "Creature.h"
 #include "RandomMovement.h"
 #include "CarnivoreFeeding.h"
+#include "MatingReproduction.h"
 class Carnivore : public Creature
 {
 public:

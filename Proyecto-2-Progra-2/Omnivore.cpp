@@ -5,7 +5,7 @@
 Omnivore::Omnivore(int x, int y):Creature(x, y) {
 	this->movement = new RandomMovement();
 	this->feeding = new HerbivoreFeeding(); // Default feeding strategy for omnivores	
-	//this->reproductionStrategy = new CarnivoreReproductionStrategy();
+	this->reproduction = new MatingReproduction();
 	this->energy = 100; // Initial energy for carnivores
 
 }
@@ -13,7 +13,7 @@ Omnivore::Omnivore(int x, int y):Creature(x, y) {
 Omnivore::Omnivore(Position pos):Creature(pos) {
 	this->movement = new RandomMovement();
 	this->feeding = new HerbivoreFeeding(); // Default feeding strategy for omnivores	
-	//this->reproductionStrategy = new CarnivoreReproductionStrategy();
+	this->reproduction = new MatingReproduction();
 	this->energy = 100; // Initial energy for carnivores
 }
 
