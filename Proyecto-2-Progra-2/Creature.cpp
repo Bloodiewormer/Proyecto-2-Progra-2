@@ -2,12 +2,14 @@
 
 Creature::Creature(int x, int y, IMovementStrategy* moveStrat, IFeedingStrategy* f):Entity(x, y), movement(moveStrat), feeding(f), age(0) {
     energy = 100; // Default energy value
-	age = 0; // Default age value
+    age = 0; // Default age value
 }
 
-Creature::Creature(const Creature& other) : Entity(other.position.x, other.position.y, other.energy) {
-    movement = other.movement; // shallow copy for simplicity
-	feeding = other.feeding; // shallow copy for simplicity
+Creature::Creature(const Creature& other) : Entity(other.position.x, other.position.y, other.energy), age(other.age) {  
+    movement = other.movement; // shallow copy for simplicity  
+    feeding = other.feeding; // shallow copy for simplicity  
+    energy = other.energy; // Ensure energy is copied  
+    age = other.age; // Initialize age explicitly  
 }
 
 Creature& Creature::operator=(const Creature& other)
@@ -24,9 +26,11 @@ Creature& Creature::operator=(const Creature& other)
 
 void Creature::update() {
     if (movement) movement->move(this);
-	if (feeding) feeding->feed(this);
+	if (feeding) feeding->feed(this);//
     energy--;
+	//if(season =="summer") energy--; // Example condition for energy consumption
 	age++;
+    
     /*
     reproduction->reproduce(this);*/
 }

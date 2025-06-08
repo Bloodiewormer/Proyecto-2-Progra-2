@@ -19,6 +19,15 @@
     <Filter Include="Header Files\Main tools">
       <UniqueIdentifier>{023265fc-8efe-48e1-b73b-ded9d7ccde66}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Entitys">
+      <UniqueIdentifier>{1c1bb98b-b316-40b9-ab2b-5b5698e6a870}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Strategy">
+      <UniqueIdentifier>{57f9bce3-0bcf-4448-92a0-58085d9d412c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Other">
+      <UniqueIdentifier>{9d859149-f031-47e5-8c05-b9b26476da28}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Controller.h">
@@ -30,80 +39,77 @@
     <ClInclude Include="Utils.h">
       <Filter>Header Files\Main tools</Filter>
     </ClInclude>
-    <ClInclude Include="Creature.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Ecosystem.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Grid.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Position.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Entity.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CreatureFactory.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Herbivore.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Carnivore.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Omnivore.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="IMovementStrategy.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="IFeedingStrategy.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="IReproductionStrategy.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="RandomMovement.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="HerbivoreFeeding.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TargetedMovement.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="OmnivoreFeeding.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CarnivoreFeeding.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="AsexualReproduction.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MatingReproduction.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CreatureDecorator.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="EntityIterator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ClimateManager.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Carnivore.h">
+      <Filter>Header Files\Entitys</Filter>
     </ClInclude>
-    <ClInclude Include="Group.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="AsexualReproduction.h">
+      <Filter>Header Files\Strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="CarnivoreFeeding.h">
+      <Filter>Header Files\Strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="Creature.h">
+      <Filter>Header Files\Entitys</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Header Files\Entitys</Filter>
+    </ClInclude>
+    <ClInclude Include="Grass.h">
+      <Filter>Header Files\Entitys</Filter>
+    </ClInclude>
+    <ClInclude Include="Grid.h">
+      <Filter>Header Files\Main tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Herbivore.h">
+      <Filter>Header Files\Entitys</Filter>
+    </ClInclude>
+    <ClInclude Include="HerbivoreFeeding.h">
+      <Filter>Header Files\Strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="IFeedingStrategy.h">
+      <Filter>Header Files\Strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="IMovementStrategy.h">
+      <Filter>Header Files\Strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="IReproductionStrategy.h">
+      <Filter>Header Files\Strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="MatingReproduction.h">
+      <Filter>Header Files\Strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomMovement.h">
+      <Filter>Header Files\Strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="Omnivore.h">
+      <Filter>Header Files\Entitys</Filter>
+    </ClInclude>
+    <ClInclude Include="Ecosystem.h">
+      <Filter>Header Files\Main tools</Filter>
+    </ClInclude>
+    <ClInclude Include="TargetedMovement.h">
+      <Filter>Header Files\Strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="ClimateManager.h">
+      <Filter>Header Files\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files\Entitys</Filter>
+    </ClInclude>
+    <ClInclude Include="Position.h">
+      <Filter>Header Files\Main tools</Filter>
+    </ClInclude>
+    <ClInclude Include="CreatureDecorator.h">
+      <Filter>Header Files\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="CreatureFactory.h">
+      <Filter>Header Files\Other</Filter>
     </ClInclude>
     <ClInclude Include="CreatureObserver.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Other</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -167,9 +173,6 @@
     <ClCompile Include="TargetedMovement.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="OmnivoreFeeding.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="CarnivoreFeeding.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -188,10 +191,10 @@
     <ClCompile Include="ClimateManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Group.cpp">
+    <ClCompile Include="CreatureObserver.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CreatureObserver.cpp">
+    <ClCompile Include="Grass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -18,6 +18,18 @@ void Utils::pause()
 #endif
 }
 
+void Utils::sleep(int milliseconds)
+{
+#ifdef _WIN32
+	Sleep(milliseconds); // Windows Sleep function
+#else
+	#include <unistd.h> // Unix-like systems
+	usleep(milliseconds * 1000); // Convert milliseconds to microseconds
+#endif
+}
+
+
+
 void Utils::ProgramColor()
 {
 #ifdef _WIN32
@@ -27,7 +39,7 @@ void Utils::ProgramColor()
 #endif
 }
 
-int Utils::InputInt()
+int Utils::inputInt()
 {
 	int value;
 	std::cin >> value;
@@ -40,7 +52,7 @@ int Utils::InputInt()
 
 }
 
-double Utils::InputDouble()
+double Utils::inputDouble()
 {
 	double value;
 	std::cin >> value;
@@ -52,7 +64,7 @@ double Utils::InputDouble()
 	return value;
 }
 
-std::string Utils::InputString()
+std::string Utils::inputString()
 {
 	std::string value;
 	while (std::cin.peek() == '\n' || std::cin.peek() == '\r') {

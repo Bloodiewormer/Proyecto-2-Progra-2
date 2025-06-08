@@ -50,12 +50,46 @@ void Grid::removeEntity(Entity* e)
 	}
 }
 
+Position Grid::getUnoccupiedPosition() const
+{
+    // Seeding logic: use seed if provided, otherwise seed once with time
+
+
+    int x = 0, y = 0;
+    int maxAttempts = GRID_SIZE * GRID_SIZE * 2;
+    for (int attempt = 0; attempt < maxAttempts; ++attempt) {
+        x = rand() % GRID_SIZE;
+        y = rand() % GRID_SIZE;
+        if (cells[x][y] == nullptr) {
+            return Position(x, y);
+        }
+    }
+
+    // Fallback: search linearly if random failed
+    for (int i = 0; i < GRID_SIZE; ++i) {
+        for (int j = 0; j < GRID_SIZE; ++j) {
+            if (cells[i][j] == nullptr) {
+                return Position(i, j);
+            }
+        }
+    }
+
+    // No unoccupied position found
+    return Position(-1, -1);
+}
+
+
 
 
 void Grid::updateAll() {
     for (int i = 0; i < GRID_SIZE; ++i)
-        for (int j = 0; j < GRID_SIZE; ++j)
+        for (int j = 0; j < GRID_SIZE; ++j) {
+            if( cells[i][j] && cells[i][j]->isDead()) {
+                removeEntity(cells[i][j]);
+			}
             if (cells[i][j]) cells[i][j]->update();
+        }
+           
 }
 
 void Grid::draw() {

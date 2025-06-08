@@ -1,7 +1,7 @@
 #pragma once
 #include "Entity.h"
 #include <vector>
-class EntityIterator{
+class EntityIterator{ // maybe not needed, already have been evaluated
 private:
     std::vector<Entity*> collection;
     int current;

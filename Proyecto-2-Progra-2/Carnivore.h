@@ -1,5 +1,7 @@
 #pragma once
 #include "Creature.h"
+#include "RandomMovement.h"
+#include "CarnivoreFeeding.h"
 class Carnivore : public Creature 
 {
 public:

@@ -3,6 +3,7 @@
 #include"IMovementStrategy.h"
 #include "IFeedingStrategy.h"
 #include "IReproductionStrategy.h"
+
 class Creature : public Entity
 {
 protected:
