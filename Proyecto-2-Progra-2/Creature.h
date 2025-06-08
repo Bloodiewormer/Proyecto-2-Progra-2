@@ -4,14 +4,18 @@
 #include"IMovementStrategy.h"
 #include "IFeedingStrategy.h"
 #include "IReproductionStrategy.h"
+#include"ClimateManager.h"
 
-class Creature : public Entity
+class Creature : public Entity, public IObserver
 {
 protected:
     IMovementStrategy* movement;
     IFeedingStrategy* feeding;
     IReproductionStrategy* reproduction;
     int age;
+
+    int seasonBoost;   // Aumento por estación
+    int climateBoost;  // Aumento por clima
 
 public:
 
@@ -27,4 +31,11 @@ public:
 	void setReproductionStrategy(IReproductionStrategy* r);
 
     int getAge() const;
+
+    // Métodos de IObserver
+    void onSeasonChange(const char* newSeason) override;
+    void onClimateChange(const char* newClimate) override;
+
+    int getSeasonBoost() const;
+    int getClimateBoost() const;
 };
