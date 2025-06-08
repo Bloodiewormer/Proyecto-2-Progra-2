@@ -1,9 +1,7 @@
 #include "Carnivore.h"
 
-//Carnivore::Carnivore(Position pos, IMovementStrategy* m, IFeedingStrategy* f, IReproductionStrategy* r, int energy)
-//    : Creature(pos, m, f, r, energy) {}
 
-Carnivore::Carnivore(int x, int y):Creature(x, y)
+Carnivore::Carnivore(int x, int y) :Creature(x, y)
 {
 	this->movement = new RandomMovement();
 	this->feeding = new CarnivoreFeeding();
@@ -27,17 +25,14 @@ char Carnivore::getSymbol() const
 
 void Carnivore::draw() const
 {
-    //first the type of creature
-    std::cout << "Carnivore at (" << position.x << ", " << position.y << ")" << std::endl;
-    //then the energy bar
-    const int barWidth = 10;
-    int filled = (energy * barWidth) / 100;
-    int empty = barWidth - filled;
-    std::cout << "Energy: ";
-    for (int i = 0; i < filled; ++i) std::cout << "#";
-    for (int i = 0; i < empty; ++i) std::cout << "*";
-    std::cout << " " << energy << "/100" << std::endl;
-
-
-
+	//first the type of creature
+	std::cout << "Carnivore at (" << position.x << ", " << position.y << ")" << std::endl;
+	//then the energy bar
+	const int barWidth = 10;
+	int filled = (energy * barWidth) / 100;
+	int empty = barWidth - filled;
+	std::cout << "Energy: ";
+	for (int i = 0; i < filled; ++i) std::cout << "#";
+	for (int i = 0; i < empty; ++i) std::cout << "*";
+	std::cout << " " << energy << "/100" << std::endl;
 }

@@ -3,11 +3,11 @@
 class Entity
 {
 protected:
-	Position position; // Position of the entity in the grid
-	int energy; // Energy level of the entity
+    Position position; // Position of the entity in the grid
+    int energy; // Energy level of the entity
 public:
     Entity(int x, int y, int energy = 100);
-	Entity(const Position& pos, int energy = 100);
+    Entity(const Position& pos, int energy = 100);
     virtual ~Entity() = default;
     virtual void update() = 0;
     virtual char getSymbol() const = 0;
@@ -18,11 +18,5 @@ public:
     int getEnergy() const;
     void modifyEnergy(int delta);
     void setEnergy(int value);
-	bool isDead() const;
-    
-
-
-
-
+    bool isDead() const;
 };
-
