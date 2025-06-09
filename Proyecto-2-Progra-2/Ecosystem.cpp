@@ -59,3 +59,7 @@ void Ecosystem::run(int maxTicks) {
 		Utils::clearScreen();
     }
 }
+
+ClimateManager& Ecosystem::getClimateManager(){
+	return climateManager;
+}
