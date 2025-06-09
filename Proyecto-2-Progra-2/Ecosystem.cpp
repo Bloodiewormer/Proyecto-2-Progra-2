@@ -3,6 +3,21 @@
 
 Ecosystem* Ecosystem::instance = nullptr;
 
+void Ecosystem::cycleEnvironment(){
+    // Ciclo simple cada 5 ticks
+    const char* seasons[] = { "primavera", "verano", "otonio", "invierno" };
+    const char* climates[] = { "soleado", "lluvioso", "nuboso", "seco" };
+
+    int seasonIndex = (tick / 5) % 4;
+    int climateIndex = (tick / 5) % 4;
+
+    climateManager.notifySeasonChange(seasons[seasonIndex]);
+    climateManager.notifyClimateChange(climates[climateIndex]);
+
+    std::cout << ">> Estación actual: " << seasons[seasonIndex] << "\n";
+    std::cout << ">> Clima actual: " << climates[climateIndex] << "\n";
+}
+
 Ecosystem& Ecosystem::getInstance()
 {
 	if (instance == nullptr) {
@@ -15,6 +30,12 @@ void Ecosystem::run(int maxTicks) {
     for (int i = 0; i < maxTicks; ++i) {
         tick++;
         std::cout << "Tick: " << tick << "\n";
+
+        // Ciclo de estación y clima cada 5 ticks
+        if (tick % 5 == 1) {
+            cycleEnvironment();  // <-- Solo añade esta línea
+        }
+
         grid.draw();
         grid.updateAll();
 

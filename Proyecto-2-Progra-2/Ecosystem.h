@@ -1,5 +1,6 @@
 #pragma once
 #include "Grid.h"
+#include "ClimateManager.h"
 #include "Utils.h"
 #include <vector>
 #include <iostream>
@@ -13,6 +14,9 @@ private:
 		grid = Grid(); // Inicializa una cuadrícula de 10x10 por defecto
 	}
 
+	ClimateManager climateManager; // Gestor de clima y estaciones
+	void cycleEnvironment(); // Método para ciclar el entorno. Cambia estación y clima
+
 public:
 	static Ecosystem& getInstance();
 	Grid& getGrid() { return grid; }
@@ -22,5 +26,5 @@ public:
 	//void saveState(); // metodo para guardar el estado del ecosistema
 	//void loadState(); // metodo para cargar el estado del ecosistema
 
-	
+	ClimateManager& getClimateManager();
 };
