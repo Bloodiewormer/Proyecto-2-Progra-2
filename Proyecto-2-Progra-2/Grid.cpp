@@ -52,11 +52,8 @@ void Grid::removeEntity(Entity* e)
 
 Position Grid::getUnoccupiedPosition() const
 {
-    // Seeding logic: use seed if provided, otherwise seed once with time
-
-
     int x = 0, y = 0;
-    int maxAttempts = GRID_SIZE * GRID_SIZE * 2;
+	int maxAttempts = GRID_SIZE * GRID_SIZE * 2; 
     for (int attempt = 0; attempt < maxAttempts; ++attempt) {
         x = rand() % GRID_SIZE;
         y = rand() % GRID_SIZE;
@@ -64,7 +61,6 @@ Position Grid::getUnoccupiedPosition() const
             return Position(x, y);
         }
     }
-
     // Fallback: search linearly if random failed
     for (int i = 0; i < GRID_SIZE; ++i) {
         for (int j = 0; j < GRID_SIZE; ++j) {

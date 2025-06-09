@@ -51,7 +51,7 @@ void Omnivore::update()
 void Omnivore::draw() const
 {
 	//first the type of creature
-	std::cout << "Omnivore at (" << position.x << ", " << position.y << ")" << std::endl;
+	std::cout << "Omnivore at (" << position.x << ", " << position.y << ")" << " Age:" << age << std::endl;
 	//then the energy bar
 	const int barWidth = 10;
 	int filled = (energy * barWidth) / 100;

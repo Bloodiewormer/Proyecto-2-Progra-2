@@ -15,7 +15,8 @@ private:
 	}
 
 	ClimateManager climateManager; // Gestor de clima y estaciones
-	void cycleEnvironment(); // Método para ciclar el entorno. Cambia estación y clima
+	void cycleSeason(); // Método para ciclar el entorno.
+	void cycleClimate(); // Método para ciclar el clima. 
 
 public:
 	static Ecosystem& getInstance();

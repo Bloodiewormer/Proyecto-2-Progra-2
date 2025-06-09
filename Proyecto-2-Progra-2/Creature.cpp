@@ -17,7 +17,7 @@ Creature::Creature(int x, int y) :Entity(x, y), age(0) {
     age = 0; // Default age value
 }
 
-Creature::Creature(Position p) : Entity(p.x, p.y), age(0) {
+Creature::Creature(Position p) : Entity(p.x, p.y) {
     movement = nullptr; // Initialize movement strategy to nullptr
     feeding = nullptr; // Initialize feeding strategy to nullptr
 	reproduction = nullptr; // Initialize reproduction strategy to nullptr
@@ -91,9 +91,9 @@ int Creature::getAge() const {
 }
 
 void Creature::onSeasonChange(const char* newSeason){
-    if (strcmp(newSeason, "primavera") == 0) seasonBoost = 10;
+	if (strcmp(newSeason, "primavera") == 0) seasonBoost = 10;//strcmp means string compare, returns 0 if equal
     else if (strcmp(newSeason, "verano") == 0) seasonBoost = 5;
-    else if (strcmp(newSeason, "otonio") == 0) seasonBoost = 3;
+    else if (strcmp(newSeason, "otonnio") == 0) seasonBoost = 3;
     else if (strcmp(newSeason, "invierno") == 0) seasonBoost = -5;
     else seasonBoost = 0;
 }

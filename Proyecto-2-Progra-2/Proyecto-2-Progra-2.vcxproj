@@ -135,10 +135,8 @@
     <ClInclude Include="Creature.h" />
     <ClInclude Include="CreatureDecorator.h" />
     <ClInclude Include="CreatureFactory.h" />
-    <ClInclude Include="CreatureObserver.h" />
     <ClInclude Include="Ecosystem.h" />
     <ClInclude Include="Entity.h" />
-    <ClInclude Include="EntityIterator.h" />
     <ClInclude Include="Grass.h" />
     <ClInclude Include="Grid.h" />
     <ClInclude Include="Herbivore.h" />
@@ -164,10 +162,8 @@
     <ClCompile Include="Creature.cpp" />
     <ClCompile Include="CreatureDecorator.cpp" />
     <ClCompile Include="CreatureFactory.cpp" />
-    <ClCompile Include="CreatureObserver.cpp" />
     <ClCompile Include="Ecosystem.cpp" />
     <ClCompile Include="Entity.cpp" />
-    <ClCompile Include="EntityIterator.cpp" />
     <ClCompile Include="Grass.cpp" />
     <ClCompile Include="Grid.cpp" />
     <ClCompile Include="Herbivore.cpp" />

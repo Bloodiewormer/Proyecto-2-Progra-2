@@ -30,7 +30,7 @@ void Herbivore::draw() const
 {
 
 	//first the type of creature
-	std::cout << "Herbivore at (" << position.x << ", " << position.y << ")" << std::endl;
+	std::cout << "Herbivore at (" << position.x << ", " << position.y << ")" <<" Age:" << age << std::endl;
 	//then the energy bar
 	const int barWidth = 10;
 	int filled = (energy * barWidth) / 100;

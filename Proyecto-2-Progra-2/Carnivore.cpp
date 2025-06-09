@@ -26,7 +26,7 @@ char Carnivore::getSymbol() const
 void Carnivore::draw() const
 {
 	//first the type of creature
-	std::cout << "Carnivore at (" << position.x << ", " << position.y << ")" << std::endl;
+	std::cout << "Carnivore at (" << position.x << ", " << position.y << ")" << " Age:" << age << std::endl;
 	//then the energy bar
 	const int barWidth = 10;
 	int filled = (energy * barWidth) / 100;
