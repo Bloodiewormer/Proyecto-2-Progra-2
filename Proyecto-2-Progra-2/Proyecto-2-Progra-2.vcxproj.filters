@@ -114,6 +114,9 @@
     <ClInclude Include="CreatureFactory.h">
       <Filter>Header Files\Other</Filter>
     </ClInclude>
+    <ClInclude Include="SeasonManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Controller.cpp">
@@ -193,6 +196,9 @@
     </ClCompile>
     <ClCompile Include="Resource.cpp">
       <Filter>Source Files\Entitys</Filter>
+    </ClCompile>
+    <ClCompile Include="SeasonManager.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

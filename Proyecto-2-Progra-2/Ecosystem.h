@@ -15,6 +15,7 @@ private:
 	}
 
 	ClimateManager climateManager; // Gestor de clima y estaciones
+	SeasonManager seasonManager; // Gestor de estaciones
 	void cycleSeason(); // Método para ciclar el entorno.
 	void cycleClimate(); // Método para ciclar el clima. 
 
@@ -28,4 +29,5 @@ public:
 	//void loadState(); // metodo para cargar el estado del ecosistema
 
 	ClimateManager& getClimateManager();
+	SeasonManager& getSeasonManager(); 
 };

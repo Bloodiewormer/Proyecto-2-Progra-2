@@ -149,6 +149,7 @@
     <ClInclude Include="Position.h" />
     <ClInclude Include="RandomMovement.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="SeasonManager.h" />
     <ClInclude Include="TargetedMovement.h" />
     <ClInclude Include="UI.h" />
     <ClInclude Include="Utils.h" />
@@ -177,6 +178,7 @@
     <ClCompile Include="Position.cpp" />
     <ClCompile Include="RandomMovement.cpp" />
     <ClCompile Include="Resource.cpp" />
+    <ClCompile Include="SeasonManager.cpp" />
     <ClCompile Include="TargetedMovement.cpp" />
     <ClCompile Include="UI.cpp" />
     <ClCompile Include="Utils.cpp" />

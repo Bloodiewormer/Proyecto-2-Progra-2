@@ -3,6 +3,8 @@
 #include<string>
 #include <vector>
 
+#include"SeasonManager.h"
+
 class IObserver {
 public:
     virtual void onClimateChange(const char* newClimate) = 0;
@@ -14,7 +16,7 @@ class ClimateManager{
 private:
     std::vector<IObserver*> observers;
     std::string currentClimate;
-    std::string currentSeason;
+    //std::string currentSeason;
 
 public:
     void registerObserver(IObserver* obs);
@@ -24,7 +26,7 @@ public:
     void notifySeasonChange(const std::string& newSeason);
 
     std::string getClimate() const;
-    std::string getSeason() const;
+    //std::string getSeason() const;
 
 };
 

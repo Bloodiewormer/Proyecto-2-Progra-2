@@ -21,7 +21,7 @@ void ClimateManager::notifyClimateChange(const std::string& newClimate){
 }
 
 void ClimateManager::notifySeasonChange(const std::string& newSeason){
-    currentSeason = newSeason;
+    //currentSeason = newSeason;
     for (int i = 0; i < observers.size(); ++i) {
         observers[i]->onSeasonChange(newSeason.c_str());
     }
@@ -31,6 +31,6 @@ std::string ClimateManager::getClimate() const{
     return currentClimate;
 }
 
-std::string ClimateManager::getSeason() const{
-    return currentSeason;
-}
+//std::string ClimateManager::getSeason() const{
+  //  return currentSeason;
+//}

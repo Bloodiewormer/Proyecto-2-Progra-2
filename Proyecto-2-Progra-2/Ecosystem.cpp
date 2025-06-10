@@ -37,7 +37,7 @@ void Ecosystem::run(int maxTicks) {
         if (tick % 2 == 0) {
             cycleClimate(); // Cambia el clima cada 2 ticks
 		}
-		std::cout << climateManager.getSeason() << std::endl;
+		std::cout << seasonManager.getSeason() << std::endl;
         std::cout << climateManager.getClimate()<<std::endl;
         grid.draw();
         grid.updateAll();
@@ -65,4 +65,8 @@ void Ecosystem::run(int maxTicks) {
 
 ClimateManager& Ecosystem::getClimateManager(){
 	return climateManager;
+}
+
+SeasonManager& Ecosystem::getSeasonManager(){
+	return seasonManager;
 }
