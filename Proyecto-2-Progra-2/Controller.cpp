@@ -2,6 +2,7 @@
 
 void Controller::run()
 {
+	UI::showWelcomeBanner(); // Show welcome banner
     std::cout << "Introduce seed for random generator?" << std::endl;
     std::cout << " (0) for random seed" << std::endl;
     int seed = Utils::inputInt();
