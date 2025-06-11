@@ -1,12 +1,6 @@
 #include <iostream>
-#include "Utils.h"
+#include "Controller.h"
 
-
-#include <ctime>
-#include <cstdlib>
-#include "Ecosystem.h"
-#include "EntityFactory.h"
-#include "Grass.h"
 //std::cout << "+-----------------------------------------------------+" << std::endl;
 //std::cout << "|                                                     |" << std::endl;
 //std::cout << "| (c) 2025                                            |" << std::endl;
@@ -23,46 +17,10 @@
 //std::cout << "+-----------------------------------------------------+" << std::endl;
 int main() {
 	Utils::ProgramColor(); // set color to console
-
-	std::cout << "Introduce seed for random generator?" << std::endl;
-	std::cout << " (0) for random seed" << std::endl;
-	int seed = Utils::inputInt();
-	if (seed == 0) {
-		seed = static_cast<unsigned int>(time(nullptr));
-		srand(seed); // use current time as seed
-	}
-	else {
-		srand(static_cast<unsigned int>(seed)); // use user provided seed
-	}
-
-	std::cout << "Using seed: " << seed << std::endl;
+	Controller controller;
+	controller.run(); // Start the controller to run the ecosystem simulation
 
 
-    Ecosystem& eco = Ecosystem::getInstance();
-    Grid& grid = eco.getGrid();
-
-    Entity* h1 = EntityFactory::createHerbivore(grid.getUnoccupiedPosition());
-	Entity* h2 = EntityFactory::createHerbivore(grid.getUnoccupiedPosition());
-    Entity* c1 = EntityFactory::createCarnivore(grid.getUnoccupiedPosition());
-	Entity* c2 = EntityFactory::createCarnivore(grid.getUnoccupiedPosition());
-    Entity* o1 = EntityFactory::createOmnivore(grid.getUnoccupiedPosition());
-	Entity* o2 = EntityFactory::createOmnivore(grid.getUnoccupiedPosition());
-
-	//Entity* p1 = new Grass(grid.getUnoccupiedPosition());
-	//Entity* p2 = new Grass(grid.getUnoccupiedPosition());
-	Entity* p1 = EntityFactory::createGrass(grid.getUnoccupiedPosition());
-	Entity* p2 = EntityFactory::createGrass(grid.getUnoccupiedPosition());
-
-    grid.placeEntity(h1);
-    grid.placeEntity(c1);
-    grid.placeEntity(o1);
-	grid.placeEntity(h2);
-	grid.placeEntity(c2);
-	grid.placeEntity(o2);
-	grid.placeEntity(p1);
-	grid.placeEntity(p2);
-
-    eco.run(1000);
     
     return 0;
 }

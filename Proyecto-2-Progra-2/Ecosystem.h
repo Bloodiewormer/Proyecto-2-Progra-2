@@ -23,6 +23,8 @@ public:
 	Grid& getGrid() { return grid; }
 	void run(int maxTicks);
 
+	int getTick() const { return tick; } // Método para obtener el número de tics actuales
+
 
 	//void saveState(); // metodo para guardar el estado del ecosistema
 	//void loadState(); // metodo para cargar el estado del ecosistema

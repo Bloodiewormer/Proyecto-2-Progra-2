@@ -145,6 +145,7 @@
     <ClInclude Include="IMovementStrategy.h" />
     <ClInclude Include="IReproductionStrategy.h" />
     <ClInclude Include="MatingReproduction.h" />
+    <ClInclude Include="Menu.h" />
     <ClInclude Include="Omnivore.h" />
     <ClInclude Include="Position.h" />
     <ClInclude Include="RandomMovement.h" />
@@ -173,6 +174,7 @@
     <ClCompile Include="IReproductionStrategy.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MatingReproduction.cpp" />
+    <ClCompile Include="Menu.cpp" />
     <ClCompile Include="Omnivore.cpp" />
     <ClCompile Include="Position.cpp" />
     <ClCompile Include="RandomMovement.cpp" />
