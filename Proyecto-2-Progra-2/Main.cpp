@@ -5,7 +5,7 @@
 #include <ctime>
 #include <cstdlib>
 #include "Ecosystem.h"
-#include "CreatureFactory.h"
+#include "EntityFactory.h"
 #include "Grass.h"
 //std::cout << "+-----------------------------------------------------+" << std::endl;
 //std::cout << "|                                                     |" << std::endl;
@@ -41,16 +41,17 @@ int main() {
     Ecosystem& eco = Ecosystem::getInstance();
     Grid& grid = eco.getGrid();
 
-    Entity* h1 = CreatureFactory::createHerbivore(grid.getUnoccupiedPosition());
-	Entity* h2 = CreatureFactory::createHerbivore(grid.getUnoccupiedPosition());
-    Entity* c1 = CreatureFactory::createCarnivore(grid.getUnoccupiedPosition());
-	Entity* c2 = CreatureFactory::createCarnivore(grid.getUnoccupiedPosition());
-    Entity* o1 = CreatureFactory::createOmnivore(grid.getUnoccupiedPosition());
-	Entity* o2 = CreatureFactory::createOmnivore(grid.getUnoccupiedPosition());
+    Entity* h1 = EntityFactory::createHerbivore(grid.getUnoccupiedPosition());
+	Entity* h2 = EntityFactory::createHerbivore(grid.getUnoccupiedPosition());
+    Entity* c1 = EntityFactory::createCarnivore(grid.getUnoccupiedPosition());
+	Entity* c2 = EntityFactory::createCarnivore(grid.getUnoccupiedPosition());
+    Entity* o1 = EntityFactory::createOmnivore(grid.getUnoccupiedPosition());
+	Entity* o2 = EntityFactory::createOmnivore(grid.getUnoccupiedPosition());
 
-	Entity* p1 = new Grass(grid.getUnoccupiedPosition());
-	Entity* p2 = new Grass(grid.getUnoccupiedPosition());
-
+	//Entity* p1 = new Grass(grid.getUnoccupiedPosition());
+	//Entity* p2 = new Grass(grid.getUnoccupiedPosition());
+	Entity* p1 = EntityFactory::createGrass(grid.getUnoccupiedPosition());
+	Entity* p2 = EntityFactory::createGrass(grid.getUnoccupiedPosition());
 
     grid.placeEntity(h1);
     grid.placeEntity(c1);

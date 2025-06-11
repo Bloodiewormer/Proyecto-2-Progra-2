@@ -4,7 +4,8 @@
 #include"IMovementStrategy.h"
 #include "IFeedingStrategy.h"
 #include "IReproductionStrategy.h"
-#include"ClimateManager.h"
+#include "EnvironmentManager.h"
+
 
 class Creature : public Entity, public IObserver
 {
@@ -16,6 +17,8 @@ protected:
 
     int seasonBoost;   // Aumento por estación
     int climateBoost;  // Aumento por clima
+	//int DecoratorBoost; // Aumento por decoración
+
 
 public:
 
@@ -33,8 +36,8 @@ public:
     int getAge() const;
 
     // Métodos de IObserver
-    void onSeasonChange(const char* newSeason) override;
-    void onClimateChange(const char* newClimate) override;
+    void onSeasonChange(const std::string& newSeason) override;
+    void onClimateChange(const std::string& newClimate) override;
 
     int getSeasonBoost() const;
     int getClimateBoost() const;

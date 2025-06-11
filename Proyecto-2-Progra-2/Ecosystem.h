@@ -1,6 +1,6 @@
 #pragma once
 #include "Grid.h"
-#include "ClimateManager.h"
+#include "EnvironmentManager.h"
 #include "Utils.h"
 #include <vector>
 #include <iostream>
@@ -13,7 +13,6 @@ private:
 	Ecosystem() : tick(0) { 
 		grid = Grid(); // Inicializa una cuadrícula de 10x10 por defecto
 	}
-
 	ClimateManager climateManager; // Gestor de clima y estaciones
 	SeasonManager seasonManager; // Gestor de estaciones
 	void cycleSeason(); // Método para ciclar el entorno.

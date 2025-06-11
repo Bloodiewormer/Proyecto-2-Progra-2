@@ -13,6 +13,8 @@ Creature::Creature(int x, int y) :Entity(x, y), age(0) {
     movement = nullptr; // Initialize movement strategy to nullptr
     feeding = nullptr; // Initialize feeding strategy to nullptr
 	reproduction = nullptr; // Initialize reproduction strategy to nullptr
+    seasonBoost = 0; // Default season boost
+    climateBoost = 0; // Default climate boost
     energy = 100; // Default energy value
     age = 0; // Default age value
 }
@@ -21,6 +23,8 @@ Creature::Creature(Position p) : Entity(p.x, p.y) {
     movement = nullptr; // Initialize movement strategy to nullptr
     feeding = nullptr; // Initialize feeding strategy to nullptr
 	reproduction = nullptr; // Initialize reproduction strategy to nullptr
+	seasonBoost = 0; // Default season boost
+	climateBoost = 0; // Default climate boost
     energy = 100; // Default energy value
     age = 0; // Default age value
 }
@@ -31,6 +35,8 @@ Creature::Creature(const Creature& other) : Entity(other.position.x, other.posit
 	reproduction = other.reproduction; // shallow copy for simplicity
     energy = other.energy; // Ensure energy is copied  
     age = other.age; // Initialize age explicitly  
+	seasonBoost = other.seasonBoost; // Copy season boost
+	climateBoost = other.climateBoost; // Copy climate boost
 }
 
 
@@ -90,19 +96,20 @@ int Creature::getAge() const {
     return age;
 }
 
-void Creature::onSeasonChange(const char* newSeason){
-	if (strcmp(newSeason, "primavera") == 0) seasonBoost = 10;//strcmp means string compare, returns 0 if equal
-    else if (strcmp(newSeason, "verano") == 0) seasonBoost = 5;
-    else if (strcmp(newSeason, "otonnio") == 0) seasonBoost = 3;
-    else if (strcmp(newSeason, "invierno") == 0) seasonBoost = -5;
+void Creature::onSeasonChange(const std::string& newSeason) {
+    // Ejemplo: ajusta el boost según la estación
+    if (newSeason == "Primavera") seasonBoost = 10;
+    else if (newSeason == "Verano") seasonBoost = 5;
+    else if (newSeason == "Otoño") seasonBoost = 3;
+    else if (newSeason == "Invierno") seasonBoost = -5;
     else seasonBoost = 0;
 }
 
-void Creature::onClimateChange(const char* newClimate){
-    if (strcmp(newClimate, "soleado") == 0) climateBoost = 5;
-    else if (strcmp(newClimate, "lluvioso") == 0) climateBoost = 3;
-    else if (strcmp(newClimate, "nuboso") == 0) climateBoost = 1;
-    else if (strcmp(newClimate, "seco") == 0) climateBoost = -3;
+void Creature::onClimateChange(const std::string& newClimate) {
+    // Ejemplo: ajusta el boost según el clima
+    if (newClimate == "Soleado") climateBoost = 5;
+    else if (newClimate == "Lluvioso") climateBoost = 2;
+    else if (newClimate == "Nublado") climateBoost = 1;
     else climateBoost = 0;
 }
 
