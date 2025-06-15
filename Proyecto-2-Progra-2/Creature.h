@@ -5,6 +5,7 @@
 #include "IFeedingStrategy.h"
 #include "IReproductionStrategy.h"
 #include "EnvironmentManager.h"
+#include "Files.h"
 
 
 class Creature : public Entity, public IObserver
@@ -14,11 +15,8 @@ protected:
     IFeedingStrategy* feeding;
     IReproductionStrategy* reproduction;
     int age;
-
     int seasonBoost;   // Aumento por estación
     int climateBoost;  // Aumento por clima
-	//int DecoratorBoost; // Aumento por decoración
-
 
 public:
 
@@ -28,7 +26,7 @@ public:
     Creature(const Creature& other);
     Creature& operator=(const Creature& other);
 
-    virtual void update() override;
+    virtual void upgrade() override;
     void setMovementStrategy(IMovementStrategy* m);
     void setFeedingStrategy(IFeedingStrategy* f);
 	void setReproductionStrategy(IReproductionStrategy* r);

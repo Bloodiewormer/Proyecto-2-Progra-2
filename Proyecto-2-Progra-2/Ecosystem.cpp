@@ -51,6 +51,22 @@ void Ecosystem::run(int maxTicks) {
     }
 }
 
+void Ecosystem::jumpToTick(int targetTick)
+{
+    for (int i = 0; i < targetTick; ++i) {
+        tick++;
+
+
+        if (tick % 5 == 1) {
+            cycleSeason(); 
+        }
+        if (tick % 2 == 0) {
+            cycleClimate(); // Cambia el clima cada 2 ticks
+        }
+        grid.updateAll();
+    }
+}
+
 ClimateManager& Ecosystem::getClimateManager(){
 	return climateManager;
 }

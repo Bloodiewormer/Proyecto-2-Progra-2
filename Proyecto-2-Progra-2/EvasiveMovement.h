@@ -4,8 +4,8 @@
 #include "Ecosystem.h"
 #include "Resource.h"
 #include <cmath>
-
-class TargetedMovement : public IMovementStrategy {
-public:
+class EvasiveMovement : public IMovementStrategy
+{
     void move(Creature* creature) override;
 };
+

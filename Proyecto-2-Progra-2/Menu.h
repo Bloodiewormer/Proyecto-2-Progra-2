@@ -4,6 +4,12 @@
 #include <functional>
 #include <iostream>
 
+
+#include "Ecosystem.h"
+#include "Utils.h"
+
+
+
 class MenuComponent {
 public:
     virtual ~MenuComponent() = default;
@@ -24,6 +30,7 @@ public:
     void execute() override {
         if (action) action();
     }
+
 };
 
 class Menu : public MenuComponent {
@@ -48,6 +55,7 @@ public:
     }
     void execute() override {
         while (true) {
+			displayHeader();
             display();
             std::cout << "Select option (0 to return): ";
             int choice;
@@ -58,4 +66,19 @@ public:
             }
         }
     }
+
+    void displayHeader() const  {
+
+            Utils::clearScreen();
+            Ecosystem& eco = Ecosystem::getInstance();
+            Grid& grid = eco.getGrid();
+            std::cout << "Ecosystem Simulation\n";
+            std::cout << "====================\n";
+            std::cout << "Tick: " << eco.getTick() << "\n";
+            std::cout << "Season: " << eco.getSeasonManager().getData() << "\n";
+            std::cout << "Climate: " << eco.getClimateManager().getData() << "\n";
+            grid.draw();
+	}
+
+
 };

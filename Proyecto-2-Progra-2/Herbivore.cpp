@@ -5,7 +5,7 @@
 
 Herbivore::Herbivore(int x, int y):Creature(x, y) 
 {
-	this->movement = new RandomMovement();
+	this->movement = new EvasiveMovement();
 	this->feeding = new HerbivoreFeeding();
 	this->reproduction = new MatingReproduction();
 	this->energy = 100; // Initial energy for herbivores
@@ -13,7 +13,7 @@ Herbivore::Herbivore(int x, int y):Creature(x, y)
 
 Herbivore::Herbivore(Position pos) :Creature(pos) 
 {
-	this->movement = new RandomMovement();
+	this->movement = new EvasiveMovement();
 	this->feeding = new HerbivoreFeeding();
 	this->reproduction = new MatingReproduction();
 	this->energy = 100; // Initial energy for herbivores
@@ -25,6 +25,29 @@ char Herbivore::getSymbol() const
 }
 
 //draw the herbivore on the console
+
+void Herbivore::upgrade()
+{
+
+
+	Creature::upgrade(); // Call the base class update to handle movement and energy consumption
+
+
+	if (energy >= 30) {
+		this->setMovementStrategy(new EvasiveMovement());
+	}
+	else {
+		this->setMovementStrategy(new RandomMovement());
+	}
+
+	if (energy <= 0) {
+		Files::writeDeathLog("Herbivore died at tick " + std::to_string(Ecosystem::getInstance().getTick()) + " of starvation at position" + std::to_string(position.x) + ", " + std::to_string(position.y) );
+		return; // Stop further processing if the herbivore has no energy
+	}
+
+
+	
+}
 
 void Herbivore::draw() const
 {

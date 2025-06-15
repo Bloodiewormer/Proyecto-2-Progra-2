@@ -22,10 +22,10 @@ char Omnivore::getSymbol() const
 	return 'O';
 }
 
-void Omnivore::update()
+void Omnivore::upgrade()
 {
 	// Call the base class update method
-	Creature::update();
+	Creature::upgrade();
 	// Additional logic specific to Omnivore can be added here
 	
 	// si es menore de 30 de energia se cambia la estrategia de alimentacion a carnivoro
@@ -41,6 +41,13 @@ void Omnivore::update()
 		}
 	} else {
 		setFeedingStrategy(new HerbivoreFeeding());
+	}
+
+	if (energy <= 0) {
+
+		Files::writeDeathLog("Omnivore died at " + std::to_string(Ecosystem::getInstance().getTick()) + " of starvation at position" + std::to_string(position.x) + ", " + std::to_string(position.y) );
+		
+		return; // Stop further processing if the herbivore has no energy
 	}
 
 }

@@ -4,6 +4,7 @@
 #include "Ecosystem.h"
 #include "EntityFactory.h"
 #include "UI.h"
+#include "Files.h"
 class Controller
 {
 	public :
@@ -11,7 +12,7 @@ class Controller
 	~Controller() = default;
 	void run();
 	void showMenu();
-	void menuSaveSlots();
-	
+	bool load();
+	void createInitialEntities();
 };
 

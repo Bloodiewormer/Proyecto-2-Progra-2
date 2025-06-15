@@ -75,8 +75,31 @@ std::string Utils::inputString()
 	return value;
 }
 
+bool Utils::YesNo(std::string question)
+{
+	std::string answer;
+	std::cout << question << " (y/n): ";
+	std::getline(std::cin, answer);
+
+	// Helper lambda to trim whitespace
+	auto trim = [](std::string& s) {
+		s.erase(0, s.find_first_not_of(" \t\r\n"));
+		s.erase(s.find_last_not_of(" \t\r\n") + 1);//\t is tab, \r is carriage return, \n is newline
+		};
+
+	trim(answer);
+
+	while (answer.size() != 1 || (tolower(answer[0]) != 'y' && tolower(answer[0]) != 'n')) {
+		std::cout << "Invalid response. Please enter 'y' or 'n': ";
+		std::getline(std::cin, answer);
+		trim(answer);
+	}
+	return (tolower(answer[0]) == 'y');
+}
+
 double Utils::Random()
 {
 	srand(static_cast<unsigned int>(time(0))); // Seed the random number generator
 	return static_cast<double>(rand()) / RAND_MAX; // Return a random double between 0 and 1
 }
+

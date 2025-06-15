@@ -99,9 +99,6 @@
     <ClInclude Include="TargetedMovement.h">
       <Filter>Header Files\Strategy</Filter>
     </ClInclude>
-    <ClInclude Include="ClimateManager.h">
-      <Filter>Header Files\Other</Filter>
-    </ClInclude>
     <ClInclude Include="Resource.h">
       <Filter>Header Files\Entitys</Filter>
     </ClInclude>
@@ -111,11 +108,20 @@
     <ClInclude Include="CreatureDecorator.h">
       <Filter>Header Files\Other</Filter>
     </ClInclude>
-    <ClInclude Include="CreatureFactory.h">
+    <ClInclude Include="EntityFactory.h">
       <Filter>Header Files\Other</Filter>
     </ClInclude>
-    <ClInclude Include="SeasonManager.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="EnvironmentManager.h">
+      <Filter>Header Files\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="EvasiveMovement.h">
+      <Filter>Header Files\Strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu.h">
+      <Filter>Header Files\Main tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Files.h">
+      <Filter>Header Files\Main tools</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -140,9 +146,6 @@
     <ClCompile Include="CarnivoreFeeding.cpp">
       <Filter>Source Files\Strategy</Filter>
     </ClCompile>
-    <ClCompile Include="ClimateManager.cpp">
-      <Filter>Source Files\Others</Filter>
-    </ClCompile>
     <ClCompile Include="Creature.cpp">
       <Filter>Source Files\Entitys</Filter>
     </ClCompile>
@@ -150,9 +153,6 @@
       <Filter>Source Files\Main tools</Filter>
     </ClCompile>
     <ClCompile Include="CreatureDecorator.cpp">
-      <Filter>Source Files\Others</Filter>
-    </ClCompile>
-    <ClCompile Include="CreatureFactory.cpp">
       <Filter>Source Files\Others</Filter>
     </ClCompile>
     <ClCompile Include="Entity.cpp">
@@ -197,7 +197,19 @@
     <ClCompile Include="Resource.cpp">
       <Filter>Source Files\Entitys</Filter>
     </ClCompile>
-    <ClCompile Include="SeasonManager.cpp">
+    <ClCompile Include="EnvironmentManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EvasiveMovement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

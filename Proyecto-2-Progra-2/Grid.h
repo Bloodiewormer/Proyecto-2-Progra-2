@@ -1,7 +1,8 @@
 #pragma once
 #include "Entity.h"
-
+#include "Files.h"
 #include <vector>
+
 
 const int GRID_SIZE = 10;
 
@@ -16,12 +17,13 @@ public:
 	void moveEntity(Entity* e, int newX, int newY);
 	void updateAll();
 	void draw();
-	bool isInBounds(int x, int y);// Verifica si las coordenadas están dentro de los límites del grid
+	bool isInBounds(int x, int y) const;// Verifica si las coordenadas están dentro de los límites del grid
 	std::vector<Entity*> getEntities() const;
 	Entity* getEntityAt(int x, int y) const;
 	void removeEntity(Entity* e);// Elimina una entidad del grid
 
 	Position getUnoccupiedPosition() const; // Obtiene una posición no ocupada en el grid
+	Position getUnoccupiedPositionNear(int x, int y) const; // Obtiene una posición no ocupada cerca de las coordenadas dadas
 
 	
 	

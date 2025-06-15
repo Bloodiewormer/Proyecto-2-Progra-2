@@ -65,16 +65,33 @@ Creature& Creature::operator=(const Creature& other)
 
 
 
-void Creature::update() {
-    if (movement) movement->move(this);
-    if (feeding) feeding->feed(this);
-	if (reproduction) reproduction->reproduce(this);    
-    energy--;
-    //if(season =="summer") energy--; // Example condition for energy consumption
-    age++;
+void Creature::upgrade() {
 
-    /*
-    reproduction->reproduce(this);*/
+    age++;
+	int probablityBoost = 0;
+	probablityBoost = seasonBoost + climateBoost; // Combine boosts from season and climate
+    if (movement) {
+        movement->move(this); // Move the creature using its movement strategy
+	}
+
+
+    if( energy <= 80) {
+        if (rand() % 100 < 50 + probablityBoost) { // 50% chance to feed, boosted by season and climate
+            if (feeding) feeding->feed(this); // Feed if energy is low
+        }
+	}
+
+
+    if (energy >= 70&& age >= 5) {
+		// random deision to reproduce
+        if (rand() % 100 < 5 + probablityBoost) { // 5% chance to reproduce
+            if (reproduction) reproduction->reproduce(this); // Reproduce if energy is sufficient or age is high
+        }
+	}
+    energy--;
+   
+
+
 }
 
 void Creature::setMovementStrategy(IMovementStrategy* m)
@@ -98,10 +115,10 @@ int Creature::getAge() const {
 
 void Creature::onSeasonChange(const std::string& newSeason) {
     // Ejemplo: ajusta el boost según la estación
-    if (newSeason == "Primavera") seasonBoost = 10;
-    else if (newSeason == "Verano") seasonBoost = 5;
+    if (newSeason == "Primavera") seasonBoost = 5;
+    else if (newSeason == "Verano") seasonBoost = 3;
     else if (newSeason == "Otoño") seasonBoost = 3;
-    else if (newSeason == "Invierno") seasonBoost = -5;
+    else if (newSeason == "Invierno") seasonBoost = -2;
     else seasonBoost = 0;
 }
 
@@ -109,7 +126,7 @@ void Creature::onClimateChange(const std::string& newClimate) {
     // Ejemplo: ajusta el boost según el clima
     if (newClimate == "Soleado") climateBoost = 5;
     else if (newClimate == "Lluvioso") climateBoost = 2;
-    else if (newClimate == "Nublado") climateBoost = 1;
+    else if (newClimate == "Nublado") climateBoost = 3;
     else climateBoost = 0;
 }
 

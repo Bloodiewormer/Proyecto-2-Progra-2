@@ -22,6 +22,25 @@ char Carnivore::getSymbol() const
 {
 	return 'C';
 }
+void Carnivore::upgrade()
+{
+	Creature::upgrade();
+
+	//move 
+	if(energy < 15){
+		// If energy is low, move randomly
+		this->setMovementStrategy(new TargetedMovement());
+	} else {
+		// Otherwise, move towards the nearest herbivore
+		this->setMovementStrategy(new RandomMovement());
+	}
+	if (energy <= 0) {
+		Files::writeDeathLog("Carnivore died at "+std::to_string(Ecosystem::getInstance().getTick()) +" of starvation at position" + std::to_string(position.x) + ", " + std::to_string(position.y) );
+		return; // Carnivore dies if energy is zero or less
+	}
+
+}
+
 
 void Carnivore::draw() const
 {

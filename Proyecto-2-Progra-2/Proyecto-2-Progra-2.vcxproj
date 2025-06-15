@@ -137,6 +137,8 @@
     <ClInclude Include="EntityFactory.h" />
     <ClInclude Include="Ecosystem.h" />
     <ClInclude Include="Entity.h" />
+    <ClInclude Include="EvasiveMovement.h" />
+    <ClInclude Include="Files.h" />
     <ClInclude Include="Grass.h" />
     <ClInclude Include="Grid.h" />
     <ClInclude Include="Herbivore.h" />
@@ -165,6 +167,8 @@
     <ClCompile Include="EntityFactory.cpp" />
     <ClCompile Include="Ecosystem.cpp" />
     <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="EvasiveMovement.cpp" />
+    <ClCompile Include="Files.cpp" />
     <ClCompile Include="Grass.cpp" />
     <ClCompile Include="Grid.cpp" />
     <ClCompile Include="Herbivore.cpp" />

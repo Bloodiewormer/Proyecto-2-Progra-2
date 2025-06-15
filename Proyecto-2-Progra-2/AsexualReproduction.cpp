@@ -10,7 +10,8 @@ void AsexualReproduction::reproduce(Entity* creature)
 
     if (symbol == 'G') { // Grass
         // Grass always reproduces asexually
-        Position newPos = Ecosystem::getInstance().getGrid().getUnoccupiedPosition();
+        Position newPos = Ecosystem::getInstance().getGrid().getUnoccupiedPositionNear(
+            creature->getPosition().x, creature->getPosition().y);
         Grass* newGrass = new Grass(newPos);
         Ecosystem::getInstance().getGrid().placeEntity(newGrass);
     } else if (symbol == 'W') { // WaterEntity (future type)
