@@ -1,0 +1,1 @@
+- Herbivore died at tick 22 eaten at position: 8, 2

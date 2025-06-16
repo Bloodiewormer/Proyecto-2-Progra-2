@@ -105,9 +105,6 @@
     <ClInclude Include="Position.h">
       <Filter>Header Files\Main tools</Filter>
     </ClInclude>
-    <ClInclude Include="CreatureDecorator.h">
-      <Filter>Header Files\Other</Filter>
-    </ClInclude>
     <ClInclude Include="EntityFactory.h">
       <Filter>Header Files\Other</Filter>
     </ClInclude>
@@ -151,9 +148,6 @@
     </ClCompile>
     <ClCompile Include="Ecosystem.cpp">
       <Filter>Source Files\Main tools</Filter>
-    </ClCompile>
-    <ClCompile Include="CreatureDecorator.cpp">
-      <Filter>Source Files\Others</Filter>
     </ClCompile>
     <ClCompile Include="Entity.cpp">
       <Filter>Source Files\Entitys</Filter>

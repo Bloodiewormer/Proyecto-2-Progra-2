@@ -133,7 +133,6 @@
     <ClInclude Include="EnvironmentManager.h" />
     <ClInclude Include="Controller.h" />
     <ClInclude Include="Creature.h" />
-    <ClInclude Include="CreatureDecorator.h" />
     <ClInclude Include="EntityFactory.h" />
     <ClInclude Include="Ecosystem.h" />
     <ClInclude Include="Entity.h" />
@@ -163,7 +162,6 @@
     <ClCompile Include="EnvironmentManager.cpp" />
     <ClCompile Include="Controller.cpp" />
     <ClCompile Include="Creature.cpp" />
-    <ClCompile Include="CreatureDecorator.cpp" />
     <ClCompile Include="EntityFactory.cpp" />
     <ClCompile Include="Ecosystem.cpp" />
     <ClCompile Include="Entity.cpp" />
