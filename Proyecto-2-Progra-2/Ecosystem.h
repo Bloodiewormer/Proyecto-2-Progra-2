@@ -11,9 +11,7 @@ private:
 	Grid grid;
 	int tick;
 	static Ecosystem* instance;
-	Ecosystem() : tick(0) { 
-		grid = Grid(); 
-	}// Inicializa una cuadrícula de 10x10 por defecto
+	Ecosystem();
 	ClimateManager climateManager; // Gestor de clima y estaciones
 	SeasonManager seasonManager; // Gestor de estaciones
 	void cycleSeason(); // Método para ciclar el entorno.
@@ -21,14 +19,14 @@ private:
 
 public:
 	static Ecosystem& getInstance();
-	Grid& getGrid() { return grid; }
+	Grid& getGrid();
 	void run(int maxTicks);
 	void jumpToTick(int targetTick); // Método para saltar a un tick específico
 
-	int getTick() const { return tick; } // Método para obtener el número de tics actuales
+	int getTick() const;
 
-	void setSeed(int newSeed) { seed = newSeed; } // Método para establecer la semilla
-	int getSeed() const { return seed; } // Método para obtener la semilla actual
+	void setSeed(int newSeed);
+	int getSeed() const;
 
 	ClimateManager& getClimateManager();
 	SeasonManager& getSeasonManager(); 

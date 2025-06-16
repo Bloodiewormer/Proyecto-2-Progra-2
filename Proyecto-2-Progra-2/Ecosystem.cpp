@@ -3,6 +3,10 @@
 
 Ecosystem* Ecosystem::instance = nullptr;
 
+Ecosystem::Ecosystem() : tick(0) {
+    grid = Grid();
+}// Inicializa una cuadrícula de 10x10 por defecto
+
 void Ecosystem::cycleSeason(){
     const char* seasons[] = { "primavera", "verano", "otonnio", "invierno" };
     int seasonIndex = 1;
@@ -24,6 +28,11 @@ Ecosystem& Ecosystem::getInstance()
 		instance = new Ecosystem();
 	}
 	return *instance;
+}
+
+Grid& Ecosystem::getGrid()
+{
+    return grid;
 }
 
 void Ecosystem::run(int maxTicks) {
@@ -66,6 +75,21 @@ void Ecosystem::jumpToTick(int targetTick)
         grid.updateAll();
     }
 }
+
+int Ecosystem::getTick() const
+{
+    return tick;
+} // Método para obtener el número de tics actuales
+
+void Ecosystem::setSeed(int newSeed)
+{
+    seed = newSeed;
+} // Método para establecer la semilla
+
+int Ecosystem::getSeed() const
+{
+    return seed;
+} // Método para obtener la semilla actual
 
 ClimateManager& Ecosystem::getClimateManager(){
 	return climateManager;
